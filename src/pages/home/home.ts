@@ -9,6 +9,7 @@ import { NavController, ModalController } from 'ionic-angular';
 import { ActivityPage } from '../activity/activity';
 import { QrcodePage } from '../qrcode/qrcode';
 import { ProfilePage } from '../profile/profile';
+import { LocationProvider } from '../../providers/location/location';
 
 declare var google;
 @Component({
@@ -25,7 +26,10 @@ export class HomePage {
   private promotionData2: Array<any> = [];
   private shopData: Array<any> = [];
   private shopData2: Array<any> = [];
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  public localationData;
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController,
+  public locationPVD: LocationProvider
+  ) {
     this.dataListX = [{
       link: ShopLocationPage,
       image: './assets/image/SL4.jpg'
@@ -79,6 +83,9 @@ export class HomePage {
       image: './assets/image/shop/nameshop8.jpg'
     }];
 
+
+    this.localationData = this.locationPVD.getCurrentLocation();
+    console.log("Location : " + this.localationData);
   }
 
   popupActivities() {
