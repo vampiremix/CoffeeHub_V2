@@ -14,8 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'shop-detail.html',
 })
 export class ShopDetailPage {
-
+  public shopImage = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.shopImage = [{
+      image: './assets/image/promotion_pic_new.png'
+    },
+    { image: './assets/image/promotion_pic_new.png' },
+    { image: './assets/image/promotion_pic_new.png' }
+    ];
   }
 
   ionViewDidLoad() {

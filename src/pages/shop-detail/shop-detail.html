@@ -14,5 +14,11 @@
 
 
 <ion-content padding>
+  <ion-slides>
+    <ion-slide *ngFor="let item of shopImage">
+      <img [src]="item.image" alt="">
+    </ion-slide>
 
+
+  </ion-slides>
 </ion-content>
