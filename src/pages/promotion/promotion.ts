@@ -16,11 +16,11 @@ import { ShopLocationPage } from '../shop-location/shop-location';
   templateUrl: 'promotion.html',
 })
 export class PromotionPage {
-  list = ['./assets/image/promotion_pic.jpg',
-  './assets/image/promotion_pic.jpg',
-  './assets/image/promotion_pic.jpg',
-  './assets/image/promotion_pic.jpg',
-  './assets/image/promotion_pic.jpg'];
+  list = ['./assets/image/promotion_pic_new.png',
+  './assets/image/promotion_pic_new.png',
+  './assets/image/promotion_pic_new.png',
+  './assets/image/promotion_pic_new.png',
+  './assets/image/promotion_pic_new.png'];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

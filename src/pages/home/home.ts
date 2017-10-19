@@ -84,7 +84,7 @@ export class HomePage {
 
 
     this.localationData = this.locationPVD.getCurrentLocation();
-    console.log("Location : " + this.localationData);
+    alert("Location : " + this.localationData);
   }
 
   popupActivities() {
