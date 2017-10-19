@@ -82,15 +82,16 @@
     <div>
       <ion-scroll scrollX="true" class="slide-x2">
         <ion-row no-padding class="row-custom">
-          <ion-col col-6 col-img-size no-padding *ngFor="let item of shopData">
+          <ion-col col-6 col-img-size no-padding *ngFor="let item of dataShop">
             <img img-size [src]="item.image" alt="">
+            <p>{{item.name}}</p>
           </ion-col>
         </ion-row>
-        <ion-row no-padding class="row-custom">
+        <!-- <ion-row no-padding class="row-custom">
           <ion-col col-6 col-img-size no-padding *ngFor="let item of shopData2">
             <img img-size [src]="item.image" alt="">
           </ion-col>
-        </ion-row>
+        </ion-row> -->
       </ion-scroll>
     </div>
 
