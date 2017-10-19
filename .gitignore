@@ -31,9 +31,10 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-
+platforms/
 # Dependency directories
 node_modules/
+www/
 jspm_packages/
 
 # Typescript v1 declaration files
