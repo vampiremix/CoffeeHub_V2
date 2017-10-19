@@ -1,0 +1,45 @@
+<ion-content no-bounce [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+  <ion-row justify-content-center paddingTop>
+    <ion-col text-center col-8>
+      <img src="./assets/image/logo-login.png" alt="">
+    </ion-col>
+  </ion-row>
+  <ion-grid grid-style padding-top>
+    <ion-row justify-content-center>
+      <ion-col text-center col-11>
+        <ion-item>
+          <ion-label fixed>Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col text-center col-11>
+        <ion-item>
+          <ion-label fixed>Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col text-center col-11>
+        <button ion-button block (click)="EmailLogin()">เข้าสู่ระบบ</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <div (click)="gotoHomePage()" font-style>ลืมรหัสผ่าน</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid position>
+    <ion-row justify-content-center row-width>
+      <ion-col text-center col-8>
+        <button ion-button block outline color="light" (click)="gotoHomePage()">สมัครสมาชิก</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

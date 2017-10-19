@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Athiti');
+page-product {
+    .segment-button.active-page {
+        color: #488aff !important;
+        background-color: #c9dcff !important;
+    }
+    .segment-md .segment-button.segment-activated {
+        border-color: white;
+    }
+    .segment-button {
+        // margin-top: 4px;
+        // background-color: #f1f1f1 !important;
+        // border: 1px !important;
+        color: rgb(255, 255, 255) !important;
+    } // ion-toolbar.scrollable-segments {
+    //     text-align: center;
+    // }
+    h2 {
+        font-family: 'Athiti', sans-serif;
+    }
+    [toolbar-style] {
+        margin-top: -6px !important;
+    }
+    [scroll-size] {
+        height: 40em;
+        width: 100%;
+    }
+}

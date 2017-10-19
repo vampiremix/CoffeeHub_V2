@@ -1,0 +1,27 @@
+page-login-email {
+    ion-content {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-color: transparent;
+    }
+    [font-style] {
+        color: #ffffff;
+        font-size: 1.2em;
+    }
+    [position] {
+        position: absolute;
+        bottom: 10%;
+    }
+    [paddingTop] {
+        padding-top: 5em;
+    }
+    [row-width] {
+        width: 100%;
+    }
+    [grid-style] {
+        background-color: rgba(129, 129, 129, 0.39);
+        border-radius: 1.5em;
+        width: 80%;
+    }
+}

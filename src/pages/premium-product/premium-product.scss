@@ -1,0 +1,43 @@
+page-premium-product {
+    
+    ion-content {
+        background-size: cover;
+    }
+    .ponit {
+        text-align: center;
+        font-size: 60px;
+        margin-top: 0.7em;
+        color: white;
+    }
+    .cup-coim {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0px;
+        font-family: 'Kanit', sans-serif;
+        color: white;
+    }
+    img {
+        height: 250px !important;
+        widows: 250px !important;
+    }
+    .img-sl {
+        margin-top: 100px;
+    }
+    .text-aling h2 {
+        text-align: center;
+        color: white;
+        margin-top: 0rem;
+    }
+    .swiper-pagination-bullet-active {
+        background: #ffffff;
+    }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab{
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+       
+    }
+}

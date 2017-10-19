@@ -1,0 +1,29 @@
+page-shop-list {
+    .name{    
+        background-color:rgba(56, 28, 28, 0.5);
+        position: absolute;
+        bottom: 0px;
+        left: 8px;
+        // background-color: #fff;
+        width: 100%;text-overflow: ellipsis;    
+        overflow: hidden;
+        white-space: nowrap;
+        color: white;
+    
+    }
+
+    .cart-shop{
+        height: 100%;
+        width: 100%;
+    }
+    ion-card img {
+        object-fit: cover;
+        width: 95%;
+        height: 95% !important;
+        
+    }
+    ion-card{
+        // margin: 8px !important;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+page-activity {
+    ion-content {
+        background-size: cover;
+    }
+    .topmargin {
+        margin-top: 8vh;
+    }
+    .ponit {
+        text-align: center;
+        font-size: 3em;
+        margin-top: -23vh;
+        color: white;
+    }
+    .cup-coin {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: -0.2em;
+        font-family: 'Kanit', sans-serif;
+        color: white;
+    }
+    .text {
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+        color: white;
+        font-family: 'Kanit', sans-serif;
+    }
+    .button-outline-ios {
+        border-width: 2px;
+        border-color: white;
+        color: white;
+        font-family: 'Kanit', sans-serif;
+    }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab {
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+    }
+    [top-padding] {
+        margin-top: 8vh;
+    }
+    [top-padding2]{
+        margin-top: -5vh;
+    }
+    [scanbtn-size]{
+        height: 21vh;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+}

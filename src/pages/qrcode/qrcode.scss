@@ -1,0 +1,21 @@
+page-qrcode {
+    ion-content {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-color: transparent;
+    }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab {
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+    }
+    [card-positon] {
+        margin-top: 50%;
+        width: 61%;
+        margin-left: 19%;
+    }
+}

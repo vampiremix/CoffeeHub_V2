@@ -1,0 +1,45 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-avatar item-left>
+      <img src="https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-1/p24x24/22046942_10212208642804725_388911395214322924_n.jpg?_nc_eui2=v1%3AAeEIlHmJz3bCChzQ6To8KhAeG4icayCdj-BUS7XNjxKng7MJFCJioJFugwrirSX0mB9qYOe8JMnDB15Ra8Z_2GV-nkzPsNtlc_LwXOEt0UKyTg&oh=6eaf3a4cd8ec0be5c1df40256fa28f06&oe=5A7CE610">
+    </ion-avatar>
+    <ion-title>
+      จ่ายเงิน/เติมเงิน
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button end color="dark">
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>จ่ายเงิน/เติมเงิน</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <ion-img img-size src="http://www.projamm.com/uploads/promotion/20151127-121741.jpg"></ion-img>
+  <ion-item no-lines>
+    <h6>เริ่มต้นใช้งานเพียงกรอกเลขบัตรประชาชน</h6>
+  </ion-item>
+  <ion-item no-lines>
+    <ion-input type="text" placeholder="กรอกเลขบัตรประชาชน 13 หลัก" [(ngModel)]="id"></ion-input>
+  </ion-item>
+  <ion-item no-lines>
+    <span>เบอร์โทรศัพท์ของคุณ </span>
+    <span>XXX-XXX-XXXX</span>
+  </ion-item>
+  <button ion-button block color="dark-brown" (click)="comfirmPassID(id)">เริ่มใช้งาน</button>
+</ion-content>

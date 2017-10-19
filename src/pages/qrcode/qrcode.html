@@ -1,0 +1,10 @@
+
+
+<ion-content padding [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+    <ion-fab right>
+        <button ion-fab mini (click)="closePage()"><ion-icon name="md-close-circle"></ion-icon></button>
+      </ion-fab>
+  <ion-card *ngIf="qrcode" card-positon>
+    <ngx-qrcode [qrc-value]="qrcode"></ngx-qrcode>
+  </ion-card>
+</ion-content>
