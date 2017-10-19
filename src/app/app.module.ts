@@ -34,6 +34,7 @@ import { QrcodePage } from '../pages/qrcode/qrcode';
 import { LoginPage } from '../pages/login/login';
 import { HttpModule } from '@angular/http';
 import { LocationProvider } from '../providers/location/location';
+import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
 
 
 
@@ -103,6 +104,7 @@ import { LocationProvider } from '../providers/location/location';
     Geolocation,
     LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ShopDataApiProvider,
     
   ]
 })
