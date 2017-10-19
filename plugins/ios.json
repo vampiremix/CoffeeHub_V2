@@ -34,10 +34,17 @@
     "phonegap-plugin-barcodescanner": {
       "CAMERA_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "To locate you",
+      "PACKAGE_NAME": "com.cnet.coffeehub"
     }
   },
   "dependent_plugins": {
     "com.googlemaps.ios": {
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-compat": {
       "PACKAGE_NAME": "com.cnet.coffeehub"
     }
   }

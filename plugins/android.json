@@ -31,6 +31,9 @@
     },
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.cnet.coffeehub"
     }
   },
   "dependent_plugins": {
