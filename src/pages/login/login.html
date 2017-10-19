@@ -1,34 +1,34 @@
-
 <ion-content no-bounce [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+  <div #map id="map"></div>
   <ion-row justify-content-center paddingTop>
     <ion-col text-center col-8>
       <img src="./assets/image/logo-login.png" alt="">
     </ion-col>
   </ion-row>
   <ion-grid grid-style padding-top>
-      <ion-row justify-content-center>
-          <ion-col text-center col-11>
-            <button ion-button block color="facebook" (click)="gotoHomePage()">เข้าสู่ระบบด้วย Facebook</button>
-            <div font-style>หรือ</div>
-          
-            <button ion-button block color="dark-brown" (click)="gotoLoginEmail()">เข้าสู่ระบบด้วย Email</button>
-          </ion-col>
-        </ion-row>
-      
-        <ion-row>
-          <ion-col text-center>
-            <div (click)="gotoHomePage()" font-style>ลงทะเบียน / เข้าสู่ระบบไม่ได้</div>
-          </ion-col>
-        </ion-row>
+    <ion-row justify-content-center>
+      <ion-col text-center col-11>
+        <button ion-button block color="facebook" (click)="gotoHomePage()">เข้าสู่ระบบด้วย Facebook</button>
+        <div font-style>หรือ</div>
+
+        <button ion-button block color="dark-brown" (click)="gotoLoginEmail()">เข้าสู่ระบบด้วย Email</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        <div (click)="gotoHomePage()" font-style>ลงทะเบียน / เข้าสู่ระบบไม่ได้</div>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-  
+
 
   <ion-grid position>
-      <ion-row justify-content-center row-width>
-          <ion-col text-center col-8>
-            <button  ion-button block outline color="light" (click)="gotoHomePage()">สมัครสมาชิก</button>
-          </ion-col>
-        </ion-row>
+    <ion-row justify-content-center row-width>
+      <ion-col text-center col-8>
+        <button ion-button block outline color="light" (click)="gotoHomePage()">สมัครสมาชิก</button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
- 
+
 </ion-content>
