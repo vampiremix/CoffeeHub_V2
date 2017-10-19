@@ -3,17 +3,22 @@ import { PremiumProductPage } from '../premium-product/premium-product';
 import { ProductPage } from '../product/product';
 import { PromotionPage } from '../promotion/promotion';
 import { ShopLocationPage } from '../shop-location/shop-location';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { ActivityPage } from '../activity/activity';
 import { QrcodePage } from '../qrcode/qrcode';
 import { ProfilePage } from '../profile/profile';
 
+declare var google;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  @ViewChild('map') mapElement: ElementRef;
+  private latLng: any = {};
+  dataShop: any = [];
+
   private dataListX: Array<any> = [];
   private promotionData: Array<any> = [];
   private promotionData2: Array<any> = [];
@@ -96,7 +101,43 @@ export class HomePage {
   gotoPage(Page) {
     this.navCtrl.push(Page);
   }
-  gotoShopList(){
+  gotoShopList() { }
 
+  ionViewDidLoad() {
+    this.initMap();
+  }
+
+  initMap() {
+    this.latLng = {
+      lat: 13.9381232,
+      lng: 100.71376
+    };
+
+    let map = new google.maps.Map(this.mapElement.nativeElement, {
+      zoom: 12,
+      center: this.latLng
+    });
+
+    let request = {
+      location: this.latLng,
+      radius: '112500',
+      types: ['restaurant'],
+      keyword: 'coffee'
+    };
+
+    let service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, (results, status) => {
+      if (status == 'OK') {
+        results.forEach(element => {
+          console.log(element);
+          // console.log(element.geometry.location.lat() +"         "+ element.geometry.location.lng() );
+          this.dataShop.push({
+            image: element.photos[0].getUrl({ 'maxWidth': 300, 'maxHeight': 300 }),
+            name: element.name
+          });
+          console.log(this.dataShop);
+        });
+      }
+    });
   }
 }
