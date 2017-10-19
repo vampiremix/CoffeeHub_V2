@@ -61,6 +61,7 @@ import { LocationProvider } from '../providers/location/location';
     LoginEmailPage,
     NewProductPage,
     ShopListPage
+
   ],
   imports: [
     BrowserModule,
@@ -100,8 +101,9 @@ import { LocationProvider } from '../providers/location/location';
     SplashScreen,
     BarcodeScanner,
     Geolocation,
+    LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    LocationProvider
+    
   ]
 })
 export class AppModule { }
