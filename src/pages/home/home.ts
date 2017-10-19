@@ -1,3 +1,4 @@
+import { ShopListPage } from '../shop-list/shop-list';
 import { NewProductPage } from '../new-product/new-product';
 import { PremiumProductPage } from '../premium-product/premium-product';
 import { ProductPage } from '../product/product';
@@ -146,5 +147,8 @@ export class HomePage {
         });
       }
     });
+  }
+  openPageShopList(){
+    this.navCtrl.push(ShopListPage);
   }
 }
