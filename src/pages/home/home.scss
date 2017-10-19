@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Kanit|Mitr|Sriracha');
 page-home {
     ion-navbar {
         ion-avatar img {
@@ -35,19 +36,35 @@ page-home {
         height: 53px;
         width: 53px;
     }
-    [nav-height]{
+    [nav-height] {
         height: 4em;
     }
-    [img-size]{
+    [img-size] {
         width: 100%;
         height: 14vh;
     }
-    [col-img-size]{
+    [col-img-size] {
         width: 35vw;
-        
-        
     }
-    .card-size{
+    .card-size {
         height: 58%;
+    }
+    .categories-title {
+        // font-family: 'Kanit', sans-serif;
+        // font-family: 'Sriracha', cursive;
+        font-family: 'Mitr', sans-serif;
+        // font-family: 'Fredoka One', cursive;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        color: rgb(92, 68, 68);
+        margin: 8px 8px 16px;
+    }
+    .see-all {
+        // font-family: 'Sriracha', cursive;
+        color: #e7a01a;
+        position: absolute;
+        right: 0;
+        margin-right: 12px;
     }
 }
