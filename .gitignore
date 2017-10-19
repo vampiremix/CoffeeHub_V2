@@ -36,6 +36,7 @@ platforms/
 node_modules/
 www/
 jspm_packages/
+platforms/
 
 # Typescript v1 declaration files
 typings/
