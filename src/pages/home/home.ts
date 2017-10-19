@@ -10,6 +10,7 @@ import { ActivityPage } from '../activity/activity';
 import { QrcodePage } from '../qrcode/qrcode';
 import { ProfilePage } from '../profile/profile';
 import { LocationProvider } from '../../providers/location/location';
+import { ShopDetailPage } from '../shop-detail/shop-detail';
 
 declare var google;
 @Component({
@@ -109,7 +110,9 @@ export class HomePage {
   gotoPage(Page) {
     this.navCtrl.push(Page);
   }
-  gotoShopList() { }
+  gotoShopList() {
+    this.navCtrl.push(ShopDetailPage);
+   }
 
   ionViewDidLoad() {
     this.initMap();

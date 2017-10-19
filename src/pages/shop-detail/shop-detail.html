@@ -13,12 +13,22 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-slides>
-    <ion-slide *ngFor="let item of shopImage">
-      <img [src]="item.image" alt="">
+<ion-content no-padding>
+
+  <ion-slides pager="true" autoplay="1000">
+    <!-- <ion-slide *ngFor="let item of shopImage"> -->
+    <ion-slide no-padding>
+      <img src="./assets/image/promotion_pic_new.png" alt="">
     </ion-slide>
-
-
+    <div tab-image>
+      <div font-color>
+        ชื่อร้านค้า
+      </div>
+      <div font-color>
+        <span>RATING * * * * *</span>
+        <span>เปิด</span>
+        <span>08.00 - 20.00</span>
+      </div>
+    </div>
   </ion-slides>
 </ion-content>

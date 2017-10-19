@@ -19,7 +19,7 @@
 </ion-header>
 
 <ion-content>
-    <div #map id="map"></div>
+  <div #map id="map"></div>
   <!-- --------------- POINT BANNER --------------- -->
   <ion-card class="card-background-page" (click)="popupActivities()">
     <img src="./assets/image/login.jpg" />
@@ -77,10 +77,9 @@
   <!-- --------------- SHOP HEADER BLOCK --------------- -->
 
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
-  <div (click)="gotoShopList()">
-    <!-- <h6>ร้านกาแฟแนะนำ</h6> -->
-    <h4 > <span class="categories-title">ร้านกาแฟแนะนำ</span> <span class="see-all" (click)="openPageShopList()">see all</span></h4>
-    <div>
+  <div>
+    <h6>ร้านกาแฟแนะนำ</h6>
+    <div (click)="gotoShopList()">
       <ion-scroll scrollX="true" class="slide-x2">
         <ion-row no-padding class="row-custom">
           <ion-col col-6 col-img-size no-padding *ngFor="let item of dataShop">
@@ -98,5 +97,5 @@
 
   </div>
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
-{{locationData}}
+  {{locationData}}
 </ion-content>

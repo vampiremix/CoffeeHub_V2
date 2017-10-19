@@ -1,3 +1,23 @@
 page-shop-detail {
-
+    ion-slides {
+        height: 45%;
+        .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+    }
+    [tab-image]{
+        background-color:rgba(56, 28, 28, 0.5);
+        position: absolute;
+        bottom: 0px;
+       
+        // background-color: #fff;
+        width: 100%;text-overflow: ellipsis;    
+        overflow: hidden;
+        white-space: nowrap;
+        color: white;
+    }
+    [font-color]{
+        color: white;
+        text-align: left
+    }
 }
