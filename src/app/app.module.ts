@@ -39,6 +39,8 @@ import { Ionic2RatingModule } from 'ionic2-rating';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { RouteUrlProvider } from '../providers/route-url/route-url';
 
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+
 
 @NgModule({
   declarations: [
@@ -110,7 +112,7 @@ import { RouteUrlProvider } from '../providers/route-url/route-url';
     ShopDataApiProvider,
     AuthenticationProvider,
     RouteUrlProvider,
-    
+    Facebook
   ]
 })
 export class AppModule { }

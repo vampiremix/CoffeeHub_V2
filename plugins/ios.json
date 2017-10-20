@@ -38,6 +38,11 @@
     "cordova-plugin-geolocation": {
       "GEOLOCATION_USAGE_DESCRIPTION": "To locate you",
       "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "292581127896829",
+      "APP_NAME": "Coffee Hub",
+      "PACKAGE_NAME": "com.cnet.coffeehub"
     }
   },
   "dependent_plugins": {

@@ -15,7 +15,7 @@ export class AuthenticationProvider {
 
 
   constructor(public http: Http,
-  private routeurl : RouteUrlProvider) {
+    private routeurl: RouteUrlProvider) {
     console.log('Hello AuthenticationProvider Provider');
   }
 
@@ -31,15 +31,14 @@ export class AuthenticationProvider {
     })
   }
 
-  facebookLogin(): Promise<any> {
-    return new Promise((resolve, reject) => {
-      this.http.get(this.routeurl.apiUrl + 'api/auth/facebook').map(res => {
-        return res.json();
-      }).subscribe(data => {
-        resolve(data);
-      }, (error) => {
-        reject(error);
-      });
-    })
+  facebookLogin() {
+    this.http.get(this.routeurl.apiUrl + 'api/auth/facebook').map(res => {
+
+    }).subscribe(data => {
+
+    }, (error) => {
+
+    });
+
   }
 }
