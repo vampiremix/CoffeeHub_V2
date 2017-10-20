@@ -39,22 +39,28 @@
             </div>
           </ion-col>
           <ion-col col-6 text-right>
-            <ion-col col-6>
+            <ion-col col-4>
               <ion-icon name="ios-pin-outline" text-center>
                 <p text-center>เช็คอิน</p>
               </ion-icon>
             </ion-col>
-            <ion-col col-6>
+            <ion-col col-4>
               <ion-icon name="ios-star-outline" text-center>
                 <p text-center>รีวิว</p>
+              </ion-icon>
+            </ion-col>
+            <ion-col col-4>
+              <ion-icon name="ios-heart-outline"  text-center>
+                  <!-- <ion-badge item-end class="icon-g">5</ion-badge> -->
+                <p text-center>ชื่นชอบ</p>
               </ion-icon>
             </ion-col>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-2 align-self-center>
+          <!-- <ion-col col-2 align-self-center>
             <p>Rate :</p>
-          </ion-col>
+          </ion-col> -->
           <ion-col col-10>
             <rating [(ngModel)]="rate" readOnly="true" max="5"></rating>
           </ion-col>
@@ -63,7 +69,7 @@
     </ion-item>
 
     <ion-item-divider gg>
-      </ion-item-divider>
+    </ion-item-divider>
 
     <ion-item>
       <ion-grid>
@@ -109,7 +115,94 @@
     <ion-item-divider gg>
     </ion-item-divider>
 
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <h2>2 Check In</h2>
+        </ion-row>
+        <ion-row>
 
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/21314397_1410273562383607_9014405429036635307_n.jpg?oh=0a9f309041a608dfbb13bab67a56fe15&oe=5A71FA23">
+          </ion-avatar>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t31.0-8/18121903_10203121626278542_1785439715994973369_o.jpg?oh=549be75f0002c24b42420af37869ed33&oe=5A776E81">
+          </ion-avatar>
+
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item-divider gg>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <h2>5 Saved</h2>
+        </ion-row>
+        <ion-row>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/22089670_1470941826275798_7876920032746434202_n.jpg?oh=dfd0a20396f31324cbba32b0b1f098b3&oe=5A7E7261">
+          </ion-avatar>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/18557302_1313421252068839_4218476934616596088_n.jpg?oh=1581d3a5724a83d3b2141f88fa7fe7da&oe=5A7E250B">
+          </ion-avatar>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/22089513_1149046705197428_6282177740112742540_n.jpg?oh=a33ba35ded872d97471e445381da1bca&oe=5A76C793">
+          </ion-avatar>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t1.0-9/21462487_796106850568334_5041422824202712184_n.jpg?oh=7a65d49930579a138cb465b4615f3169&oe=5A7FEEE6">
+          </ion-avatar>
+          <ion-avatar item-left>
+            <img src="https://scontent.fbkk5-3.fna.fbcdn.net/v/t31.0-8/22548618_2172565272970356_2774150178659768122_o.jpg?oh=23e309bde56131f4ee4a54ca93ac2a26&oe=5A71DB85">
+          </ion-avatar>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item-divider gg>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-1>
+            <img src="./assets/image/icon (1).png">
+          </ion-col>
+          <ion-col col-11>
+            <span>Parking
+              <p>(มีที่จอดรถ 1-3 ที่)</p>
+            </span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <img src="./assets/image/icon (1).png">
+          </ion-col>
+          <ion-col col-11>
+            เหมาะกับสุขภาพ
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <img src="./assets/image/icon (1).png">
+          </ion-col>
+          <ion-col col-11>
+            เหมาะสำหรับนั่งทำงาน
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+            <img src="./assets/image/icon (1).png">
+          </ion-col>
+          <ion-col col-11>
+            จำนวนลูกค้าที่รองรับได้
+            <p>(1-20 ที่นั้ง)</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
 
   </ion-list>
 
