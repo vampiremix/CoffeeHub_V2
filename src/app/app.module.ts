@@ -35,7 +35,6 @@ import { LoginPage } from '../pages/login/login';
 import { HttpModule } from '@angular/http';
 import { LocationProvider } from '../providers/location/location';
 import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
-
 import { Ionic2RatingModule } from 'ionic2-rating';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { RouteUrlProvider } from '../providers/route-url/route-url';
