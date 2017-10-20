@@ -78,24 +78,18 @@
 
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
   <div>
-    <h6>ร้านกาแฟแนะนำ</h6>
+    <h4 class="categories-title">ร้านกาแฟแนะนำ<span class="see-all" (click)="openPageShopList()">see all</span></h4>
     <div (click)="gotoShopList()">
       <ion-scroll scrollX="true" class="slide-x2">
         <ion-row no-padding class="row-custom">
-          <ion-col col-6 col-img-size no-padding *ngFor="let item of dataShop">
+          <ion-col col-4 col-img-size no-padding *ngFor="let item of dataShop">
             <img img-size [src]="item.image" alt="">
-            <p>{{item.name}}</p>
+            <p class="name-text">{{item.name}}</p>
           </ion-col>
         </ion-row>
-        <!-- <ion-row no-padding class="row-custom">
-          <ion-col col-6 col-img-size no-padding *ngFor="let item of shopData2">
-            <img img-size [src]="item.image" alt="">
-          </ion-col>
-        </ion-row> -->
       </ion-scroll>
     </div>
 
   </div>
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
-  {{locationData}}
 </ion-content>
