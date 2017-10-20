@@ -3,6 +3,7 @@ import { Component, ElementRef, ViewChild  } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
+import { AuthenticationProvider } from '../../providers/authentication/authentication';
 
 /**
  * Generated class for the LoginPage page.
@@ -24,7 +25,9 @@ export class LoginPage {
   dataShop: any = [];
   
   public backgroundImage = 'assets/image/login-bg.jpg';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private authenPVD: AuthenticationProvider
+  ) {
     
   }
 
@@ -72,4 +75,7 @@ export class LoginPage {
     });
   }
 
+  fblogin() {
+    this.authenPVD.facebookLogin().then((data) => { alert("FB : " + data) }).catch((err) => { alert("Err FB : " + err) });
+  }
 }

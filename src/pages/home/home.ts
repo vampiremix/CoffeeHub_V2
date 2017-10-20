@@ -11,6 +11,7 @@ import { QrcodePage } from '../qrcode/qrcode';
 import { ProfilePage } from '../profile/profile';
 import { LocationProvider } from '../../providers/location/location';
 import { ShopDetailPage } from '../shop-detail/shop-detail';
+import { AuthenticationProvider } from '../../providers/authentication/authentication';
 
 declare var google;
 @Component({
@@ -29,7 +30,8 @@ export class HomePage {
   private shopData2: Array<any> = [];
   public localationData;
   constructor(public navCtrl: NavController, public modalCtrl: ModalController,
-  public locationPVD: LocationProvider
+    public locationPVD: LocationProvider,
+  
   ) {
     this.dataListX = [{
       link: ShopLocationPage,
@@ -112,7 +114,7 @@ export class HomePage {
   }
   gotoShopList() {
     this.navCtrl.push(ShopDetailPage);
-   }
+  }
 
   ionViewDidLoad() {
     this.initMap();
@@ -151,7 +153,9 @@ export class HomePage {
       }
     });
   }
-  openPageShopList(){
+  openPageShopList() {
     this.navCtrl.push(ShopListPage);
   }
+
+  
 }
