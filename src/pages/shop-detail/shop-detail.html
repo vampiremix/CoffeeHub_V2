@@ -20,15 +20,29 @@
     <ion-slide no-padding>
       <img src="./assets/image/promotion_pic_new.png" alt="">
     </ion-slide>
-    <div tab-image>
-      <div font-color>
+    <ion-slide no-padding>
+      <img src="./assets/image/promotion_pic_new.png" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list>
+    <ion-item>
+      <div>
         ชื่อร้านค้า
       </div>
-      <div font-color>
-        <span>RATING * * * * *</span>
+      <div>
         <span>เปิด</span>
         <span>08.00 - 20.00</span>
       </div>
-    </div>
-  </ion-slides>
+    </ion-item>
+    <ion-item>
+      <div>
+        <span>Rate : </span>
+        <span>
+         
+        </span>
+      </div>
+    </ion-item>
+  </ion-list>
+  <rating [(ngModel)]="rate" readOnly="true" max="5"></rating>
 </ion-content>

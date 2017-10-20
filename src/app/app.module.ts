@@ -36,6 +36,7 @@ import { HttpModule } from '@angular/http';
 import { LocationProvider } from '../providers/location/location';
 import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
 
+import { Ionic2RatingModule } from 'ionic2-rating';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
   imports: [
     BrowserModule,
     HttpModule,
+    Ionic2RatingModule,
     IonicModule.forRoot(MyApp,{
       SegmentButton:'segment'
     }),
