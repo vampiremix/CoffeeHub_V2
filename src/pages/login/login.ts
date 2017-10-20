@@ -61,12 +61,17 @@ export class LoginPage {
       if (status == 'OK') {
         results.forEach(element => {
           console.log(element);
+          // let data = element.id;
+          // element.forEach(element1 => {
+          //   console.log(element1);
+          // });
+          
           // console.log(element.geometry.location.lat() +"         "+ element.geometry.location.lng() );
           this.dataShop.push({
             image: element.photos[0].getUrl({ 'maxWidth': 300, 'maxHeight': 300 }),
             name: element.name
           });
-          console.log(this.dataShop);
+          // console.log(this.dataShop);
         });
       }
     });

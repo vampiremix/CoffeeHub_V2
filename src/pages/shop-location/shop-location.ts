@@ -1,16 +1,18 @@
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 declare var google;
+
 @IonicPage()
 @Component({
   selector: 'page-shop-location',
   templateUrl: 'shop-location.html',
 })
 export class ShopLocationPage {
+  
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
-
   dataShop;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

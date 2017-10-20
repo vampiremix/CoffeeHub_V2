@@ -27,22 +27,91 @@
 
   <ion-list>
     <ion-item>
-      <div>
-        ชื่อร้านค้า
-      </div>
-      <div>
-        <span>เปิด</span>
-        <span>08.00 - 20.00</span>
-      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <div>
+              ชื่อร้านค้า
+            </div>
+            <div>
+              <p>เปิด</p>
+              <p>08.00 - 20.00</p>
+            </div>
+          </ion-col>
+          <ion-col col-6 text-right>
+            <ion-col col-6>
+              <ion-icon name="ios-pin-outline" text-center>
+                <p text-center>เช็คอิน</p>
+              </ion-icon>
+            </ion-col>
+            <ion-col col-6>
+              <ion-icon name="ios-star-outline" text-center>
+                <p text-center>รีวิว</p>
+              </ion-icon>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 align-self-center>
+            <p>Rate :</p>
+          </ion-col>
+          <ion-col col-10>
+            <rating [(ngModel)]="rate" readOnly="true" max="5"></rating>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
+
+    <ion-item-divider gg>
+      </ion-item-divider>
+
     <ion-item>
-      <div>
-        <span>Rate : </span>
-        <span>
-         
-        </span>
-      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <img src="./assets/image/mobile-phone (1).png">
+          </ion-col>
+          <ion-col col-10>
+            <p>เบอร์โทรศัพท์</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2>
+            <img src="./assets/image/maps-and-flags (1).png">
+          </ion-col>
+          <ion-col col-10>
+            <p>55/6 ถนน ลำลูกกา ตำบล บึงคำพร้อย </p>
+            <p>อำเภอ ลำลูกกา ปทุมธานี 12150</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2>
+            <img src="./assets/image/dinner.png">
+          </ion-col>
+          <ion-col col-10>
+            <p>เมนูและราคา</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
+
+    <ion-item-divider gg>
+    </ion-item-divider>
+
+    <ion-item>
+      <p>ให้คะแนนร้านนี้</p>
+      <rating [(ngModel)]="review" readOnly="false" max="5"></rating>
+      <ion-avatar item-left>
+        <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460">
+      </ion-avatar>
+    </ion-item>
+
+    <ion-item-divider gg>
+    </ion-item-divider>
+
+
+
   </ion-list>
-  <rating [(ngModel)]="rate" readOnly="true" max="5"></rating>
+
+
 </ion-content>

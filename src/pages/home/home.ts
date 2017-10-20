@@ -85,8 +85,8 @@ export class HomePage {
     }];
 
 
-    this.localationData = this.locationPVD.getCurrentLocation();
-    alert("Location : " + this.localationData);
+    // this.localationData = this.locationPVD.getCurrentLocation();
+    // alert("Location : " + this.localationData);
   }
 
   popupActivities() {

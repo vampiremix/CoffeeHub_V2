@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ShopDetailPage {
   public shopImage = [];
   public rate = 5;
+  public review = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.shopImage = [{
       image: './assets/image/promotion_pic_new.png'
