@@ -31,12 +31,12 @@ export class AuthenticationProvider {
     })
   }
 
-  facebookLogin(): Promise<UsersModel> {
+  facebookLogin(): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(this.routeurl.apiUrl + 'api/auth/facebook/callback', this.routeurl.optionsURL).map(res => {
+      this.http.get(this.routeurl.apiUrl + 'api/auth/facebook').map(res => {
         return res.json();
       }).subscribe(data => {
-        resolve(data as Promise<UsersModel>);
+        resolve(data);
       }, (error) => {
         reject(error);
       });
