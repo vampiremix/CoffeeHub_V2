@@ -6,15 +6,35 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>other</ion-title>
+  <ion-navbar class="fontText">
+    <ion-title>อื่นๆ</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content >
-<button ion-button (click)="shopList()" >
-  shopList
+  <div id="divButton">
+    
+    
+      <ion-fab>
+          <button ion-fab>
+            <ion-icon name="pin"></ion-icon>
+          </button>
+        </ion-fab>
+        เติม CUPCOIN
+        <br><br><br><br><br><br>
+        <button ion-button icon-only >
+            <ion-icon name="star"></ion-icon>
+          </button>
+
+
+<br><br><br><br><br><br>
+<button ion-button block class="fontText">
+  เติม CUPCOIN
 </button>
+<button ion-button block (click)="about()" class="fontText">
+  เกี่ยวกับเรา
+</button>
+</div>
 </ion-content>

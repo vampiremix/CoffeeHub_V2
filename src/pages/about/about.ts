@@ -10,5 +10,8 @@ export class AboutPage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  closePage(){
+   // alert("ปิด");
+    this.navCtrl.pop();
+  }
 }

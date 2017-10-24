@@ -15,13 +15,15 @@ page-home {
     }
     .row-custom {
         flex-wrap: inherit !important;
-        
     }
     .slide-x {
         height: 142px;
     }
+    .slide-x1 {
+        height: 31vh;
+    }
     .slide-x2 {
-        height: 20vh;
+        height: 15vh;
     }
     .tb {
         font-weight: bold;
@@ -42,7 +44,7 @@ page-home {
     }
     [img-size] {
         width: 100%;
-        height: 18vh;
+        height: 15vh;
     }
     [col-img-size] {
         width: 35vw;
@@ -53,13 +55,12 @@ page-home {
     .categories-title {
         // font-family: 'Kanit', sans-serif;
         // font-family: 'Sriracha', cursive;
-        font-family: 'Mitr', sans-serif;
-        // font-family: 'Fredoka One', cursive;
+        font-family: 'Mitr', sans-serif; // font-family: 'Fredoka One', cursive;
         font-size: 1.5rem;
         font-weight: 800;
         letter-spacing: 0.7px;
         color: rgb(92, 68, 68);
-        margin: 8px 8px 16px;
+        margin: 8px;
     }
     .see-all {
         // font-family: 'Sriracha', cursive;
@@ -68,8 +69,8 @@ page-home {
         right: 0;
         margin-right: 12px;
     }
-    .name-text{
-        background-color:rgba(56, 28, 28, 0.7);
+    .name-text {
+        background-color: rgba(56, 28, 28, 0.7);
         position: absolute;
         width: 100%;
         margin-top: -35px;
@@ -80,4 +81,12 @@ page-home {
         overflow: hidden;
         text-align: center;
     }
+    [point-style] {
+        font-size: 8em;
+        margin-top: 4vh;
+        position: absolute;
+        color:white;
+      
+    }
+
 }

@@ -1,3 +1,46 @@
 page-about {
-
+    .scroll-content{
+        background-image: url("../assets/image/contactus_page.png") !important;
+        background-size: 100% 100% !important; 
+    }
+    ion-icon {
+        font-size: 2.2em;
+        color: #4e3121;
+    }
+    img {
+        max-width: 60%;
+        border: 0;
+    }
+  
+    #divVersion{
+        text-align: center !important;
+        padding-bottom: 25px;
+        padding-top: 40px;
+        font-weight: 900;
+        color: #86807d;
+    }
+    .item{
+        background-color: transparent !important;
+    }
+    .label{
+        font-size: 14px; 
+    }
+    #listData {
+        margin: -1px 0 32px;
+        border-radius: 28px;
+        background-color: rgba(255, 255, 255, 0.73);
+        padding: 12px;
+    }
+    .list-ios > .item-block:first-child {
+        border-bottom: 0.55px solid #ffffff;
+        border-top: 0px solid rgba(200, 199, 204, 0);
+      }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab {
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+    }
 }
