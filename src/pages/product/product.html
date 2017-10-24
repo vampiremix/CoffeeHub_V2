@@ -13,57 +13,96 @@
 </ion-header>
 
 
-<ion-content no-bounce >
+<ion-content no-bounce>
 
-    <ion-toolbar  class="scrollable-segments" toolbar-style>
-      <ion-segment [(ngModel)]="pet" mode="md" >
-        <ion-segment-button value="dinks">
-          <ion-icon ios="ios-cafe" md="md-cafe"></ion-icon>
-          drinks
-        </ion-segment-button>
-        <ion-segment-button value="desserts">
-          <ion-icon ios="ios-ice-cream" md="md-ice-cream"></ion-icon>
-          desserts
-        </ion-segment-button>
-        <ion-segment-button value="foods">
-          <ion-icon ios="ios-restaurant" md="md-restaurant"></ion-icon>
-          foods
-        </ion-segment-button>
-      </ion-segment>
-    </ion-toolbar>
+  <ion-toolbar class="scrollable-segments" toolbar-style>
+    <ion-segment [(ngModel)]="pet" mode="md">
+      <ion-segment-button value="dinks">
+        <ion-icon ios="ios-cafe" md="md-cafe"></ion-icon>
+        drinks
+      </ion-segment-button>
+      <ion-segment-button value="desserts">
+        <ion-icon ios="ios-ice-cream" md="md-ice-cream"></ion-icon>
+        desserts
+      </ion-segment-button>
+      <ion-segment-button value="foods">
+        <ion-icon ios="ios-restaurant" md="md-restaurant"></ion-icon>
+        foods
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 
-    <ion-scroll scrollY="true" scroll-size>
-   
-  <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'dinks'">
-      <ion-item *ngFor="let item of product.dinks">
-        <ion-thumbnail item-start>
-          <img src="{{item.image}}">
-        </ion-thumbnail>
-        <h2>{{item.name}}</h2>
-        <p>฿ {{item.price}} . -</p>
-      </ion-item>
-    </ion-list>
+  <ion-scroll scrollY="true" scroll-size>
 
-    <ion-list *ngSwitchCase="'desserts'">
-      <ion-item *ngFor="let item of product.desserts">
-        <ion-thumbnail item-start>
-          <img src="{{item.image}}">
-        </ion-thumbnail>
-        <h2>{{item.name}}</h2>
-        <p>฿ {{item.price}} . -</p>
-      </ion-item>
-    </ion-list>
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'dinks'">
+        <ion-item *ngFor="let item of product.dinks">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <ion-thumbnail item-start>
+                  <img src="{{item.image}}">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-7>
+                <h2>{{item.name}}</h2>
+                <p>฿ {{item.price}} . -</p>
+              </ion-col>
+              <ion-col col-2 text-center align-self-center>
+                <button ion-button color="danger" class="peel">
+                  <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
 
-    <ion-list *ngSwitchCase="'foods'">
-      <ion-item *ngFor="let item of product.foods">
-        <ion-thumbnail item-start>
-          <img src="{{item.image}}">
-        </ion-thumbnail>
-        <h2>{{item.name}}</h2>
-        <p>฿ {{item.price}} . -</p>
-      </ion-item>
-    </ion-list>
-  </div>
-</ion-scroll>
+      <ion-list *ngSwitchCase="'desserts'">
+        <ion-item *ngFor="let item of product.desserts">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <ion-thumbnail item-start>
+                  <img src="{{item.image}}">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-7>
+                <h2>{{item.name}}</h2>
+                <p>฿ {{item.price}} . -</p>
+              </ion-col>
+              <ion-col col-2 text-center align-self-center>
+                <button ion-button color="danger" class="peel">
+                  <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'foods'">
+        <ion-item *ngFor="let item of product.foods">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <ion-thumbnail item-start>
+                  <img src="{{item.image}}">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-7>
+                <h2>{{item.name}}</h2>
+                <p>฿ {{item.price}} . -</p>
+              </ion-col>
+              <ion-col col-2 text-center align-self-center>
+                <button ion-button color="danger" class="peel">
+                  <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-scroll>
 </ion-content>
