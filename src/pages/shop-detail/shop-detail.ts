@@ -19,6 +19,7 @@ export class ShopDetailPage {
   public reviewPoint = 0;
   public dataPost = {};
   public isHide: boolean = false;
+  // public text = "ให้คะแนน"
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.shopImage = [{
@@ -41,7 +42,8 @@ export class ShopDetailPage {
   saveDataPost(post) {
     this.dataPost = {
       point: this.reviewPoint,
-      comment: post
+      comment: post,
+      textpoint : "ให้คะแนน"
     }
     console.log(this.dataPost);
     this.isHide = !this.isHide

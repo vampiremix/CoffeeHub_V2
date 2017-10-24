@@ -115,7 +115,7 @@
           </ion-col>
           <ion-col col-10>
             <p>ให้คะแนนร้านนี้
-              <span *ngIf="reviewPoint">{{reviewPoint}}</span>
+              <!-- <span *ngIf="reviewPoint">{{reviewPoint}}</span> -->
             </p>
 
             <ion-row>
@@ -126,7 +126,8 @@
               </ion-item>
             </div>
             <div *ngIf=isHide>
-              <p > {{dataPost.comment}} </p>
+              <p> {{dataPost.comment}} </p>
+              <p> {{dataPost.textpoint}} : {{dataPost.point}} </p>
             </div>
             </ion-row>
             <ion-row justify-content-end>
