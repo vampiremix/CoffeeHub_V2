@@ -50,8 +50,8 @@
               </ion-icon>
             </ion-col>
             <ion-col col-4>
-              <ion-icon name="ios-heart-outline"  text-center>
-                  <!-- <ion-badge item-end class="icon-g">5</ion-badge> -->
+              <ion-icon name="ios-heart-outline" text-center>
+                <!-- <ion-badge item-end class="icon-g">5</ion-badge> -->
                 <p text-center>ชื่นชอบ</p>
               </ion-icon>
             </ion-col>
@@ -105,11 +105,43 @@
     </ion-item-divider>
 
     <ion-item>
-      <p>ให้คะแนนร้านนี้</p>
-      <rating [(ngModel)]="review" readOnly="false" max="5"></rating>
-      <ion-avatar item-left>
-        <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460">
-      </ion-avatar>
+      <ion-grid>
+
+        <ion-row>
+          <ion-col col-2>
+            <ion-avatar item-left>
+              <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460">
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-10>
+            <p>ให้คะแนนร้านนี้
+              <!-- <span *ngIf="reviewPoint">{{reviewPoint}}</span> -->
+            </p>
+
+            <ion-row>
+              <rating [(ngModel)]="review" readOnly="false" max="5" (click)="getPoint(review)" *ngIf=" review !== null"></rating>
+              <div *ngIf=!isHide>
+              <ion-item>
+                <ion-input type="text" placeholder="ความคิดเห็นเกี่ยวกับร้านนี้" [(ngModel)]="post"></ion-input>
+              </ion-item>
+            </div>
+            <div *ngIf=isHide>
+              <p> {{dataPost.comment}} </p>
+              <p> {{dataPost.textpoint}} : {{dataPost.point}} </p>
+            </div>
+            </ion-row>
+            <ion-row justify-content-end>
+                <button ion-button small (click)="saveDataPost(post)">โพสต์</button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+
+        </ion-row>
+      </ion-grid>
+
+
+
     </ion-item>
 
     <ion-item-divider gg>
@@ -204,7 +236,9 @@
       </ion-grid>
     </ion-item>
 
-  </ion-list>
+    <ion-item-divider gg>
+    </ion-item-divider>
 
+  </ion-list>
 
 </ion-content>
