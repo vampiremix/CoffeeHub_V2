@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Athiti');
 page-other {
+    .scroll-content{
+        background-image: url("../assets/image/contactus_page.png") !important;
+        background-size: 100% 100% !important; 
+    }
+    .fontText {
+        font-family: 'Mitr', sans-serif; // font-family: 'Fredoka One', cursive;
+    }
     .segment-button.active-page {
         color: #488aff !important;
         background-color: #c9dcff !important;
@@ -38,5 +45,8 @@ page-other {
     h2{
         font-family: 'Athiti', sans-serif;
     }
-
+    #divButton{
+        padding: 5px
+    }
+    
 }

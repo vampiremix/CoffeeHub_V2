@@ -1,3 +1,4 @@
+import { AboutPage } from './../about/about';
 import { ShopListPage } from '../shop-list/shop-list';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -22,5 +23,8 @@ export class OtherPage {
   }
   shopList(){
     this.navCtrl.push(ShopListPage);
+  }
+  about(){
+    this.navCtrl.push(AboutPage);
   }
 }
