@@ -1,0 +1,14 @@
+list-item {
+    .h3-name {
+        color: #7B5102;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        visibility: visible;
+    }
+}
