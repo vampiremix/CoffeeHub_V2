@@ -1,5 +1,5 @@
 import { LoginEmailPage } from '../login-email/login-email';
-import { Component, ElementRef, ViewChild  } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
@@ -23,13 +23,13 @@ export class LoginPage {
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop: any = [];
-  
+
   public backgroundImage = 'assets/image/login-bg.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private authenPVD: AuthenticationProvider,
     private fb: Facebook
   ) {
-    
+
   }
 
   ionViewDidLoad() {
@@ -38,7 +38,7 @@ export class LoginPage {
   gotoHomePage() {
     this.navCtrl.setRoot(TabsPage);
   }
-  gotoLoginEmail(){
+  gotoLoginEmail() {
     this.navCtrl.push(LoginEmailPage);
   }
 
@@ -69,7 +69,7 @@ export class LoginPage {
           // element.forEach(element1 => {
           //   console.log(element1);
           // });
-          
+
           // console.log(element.geometry.location.lat() +"         "+ element.geometry.location.lng() );
           this.dataShop.push({
             image: element.photos[0].getUrl({ 'maxWidth': 300, 'maxHeight': 300 }),
@@ -83,8 +83,14 @@ export class LoginPage {
 
   fblogin() {
     this.fb.login(['public_profile', 'user_friends', 'email'])
-    .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
-    .catch(e => console.log('Error logging into Facebook', e));
+      .then((res: FacebookLoginResponse) => {
+        alert('Logged into Facebook! : ' + JSON.stringify(res));
+        this.fb.api('me?fields=email,id,first_name,name,last_name,picture.width(600).height(600)',null).then((resData)=>{ alert(" DATA : " + JSON.stringify(resData))});
+      }
+
+
+      )
+      .catch(e => alert('Error logging into Facebook : ' + e));
     // this.authenPVD.facebookLogin().then((data) => { alert("FB : " + data) }).catch((err) => { alert("Err FB : " + err) });
   }
 }

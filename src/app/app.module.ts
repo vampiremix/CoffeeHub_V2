@@ -76,8 +76,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     BrowserModule,
     HttpModule,
     Ionic2RatingModule,
-    IonicModule.forRoot(MyApp,{
-      SegmentButton:'segment'
+    IonicModule.forRoot(MyApp, {
+      SegmentButton: 'segment'
     }),
     NgxQRCodeModule
   ],
