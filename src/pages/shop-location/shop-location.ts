@@ -15,6 +15,8 @@ export class ShopLocationPage {
   private latLng: any = {};
   dataShop;
 
+  Edit = "map";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -22,6 +24,16 @@ export class ShopLocationPage {
   ionViewDidLoad() {
     this.initMap();
     
+  }
+
+  clicktogglr() {
+    if (this.Edit == "map") {
+      this.Edit = "list"
+      
+    } else if (this.Edit == "list") {
+      this.Edit = "map"
+    
+    }
   }
 
   initMap() {

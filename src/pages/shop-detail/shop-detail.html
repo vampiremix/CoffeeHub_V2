@@ -121,17 +121,23 @@
             <ion-row>
               <rating [(ngModel)]="review" readOnly="false" max="5" (click)="getPoint(review)" *ngIf=" review !== null"></rating>
               <div *ngIf=!isHide>
-              <ion-item>
-                <ion-input type="text" placeholder="ความคิดเห็นเกี่ยวกับร้านนี้" [(ngModel)]="post"></ion-input>
-              </ion-item>
-            </div>
-            <div *ngIf=isHide>
-              <p> {{dataPost.comment}} </p>
-              <p> {{dataPost.textpoint}} : {{dataPost.point}} </p>
-            </div>
+                <ion-item>
+                  <ion-input type="text" placeholder="ความคิดเห็นเกี่ยวกับร้านนี้" [(ngModel)]="post"></ion-input>
+                </ion-item>
+              </div>
+              <div *ngIf=isHide>
+                <p> {{dataPost.comment}} </p>
+                <p> {{dataPost.textpoint}} : {{dataPost.point}} </p>
+              </div>
             </ion-row>
-            <ion-row justify-content-end>
+            <ion-row>
+              <ion-col>
+
+              </ion-col>
+              <ion-col justify-content-end>
                 <button ion-button small (click)="saveDataPost(post)">โพสต์</button>
+              </ion-col>
+
             </ion-row>
           </ion-col>
         </ion-row>
@@ -139,9 +145,6 @@
 
         </ion-row>
       </ion-grid>
-
-
-
     </ion-item>
 
     <ion-item-divider gg>
