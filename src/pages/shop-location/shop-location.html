@@ -8,13 +8,17 @@
 
   <ion-navbar>
     <ion-title>Find Coffee Shop</ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="size-btn" (click)="clicktogglr()">
+        <ion-icon [name]="Edit"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content>
-  
+
   <div #map id="map"></div>
 
 </ion-content>

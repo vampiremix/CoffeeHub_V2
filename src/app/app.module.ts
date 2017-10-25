@@ -1,4 +1,7 @@
 import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
+import { RegisterPage } from '../pages/register/register';
+import { SearchbarComponent } from '../components/searchbar/searchbar';
+import { ListItemComponent } from '../components/list-item/list-item';
 import { NewProductPage } from '../pages/new-product/new-product';
 import { ShopListPage } from '../pages/shop-list/shop-list';
 import { SegmentButton } from 'ionic-angular/es2015';
@@ -41,6 +44,7 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
 import { RouteUrlProvider } from '../providers/route-url/route-url';
 
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { RegisterProvider } from '../providers/register/register';
 
 
 @NgModule({
@@ -67,15 +71,17 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     LoginEmailPage,
     NewProductPage,
     ShopListPage,
-    RateCupcoinPage
-
+    RateCupcoinPage,
+    ListItemComponent,
+    SearchbarComponent,
+    RegisterPage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     Ionic2RatingModule,
-    IonicModule.forRoot(MyApp,{
-      SegmentButton:'segment'
+    IonicModule.forRoot(MyApp, {
+      SegmentButton: 'segment'
     }),
     NgxQRCodeModule
   ],
@@ -103,7 +109,10 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     LoginEmailPage,
     NewProductPage,
     ShopListPage,
-    RateCupcoinPage
+    RateCupcoinPage,
+    ListItemComponent,
+    SearchbarComponent,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -115,7 +124,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDataApiProvider,
     AuthenticationProvider,
     RouteUrlProvider,
-    Facebook
+    Facebook,
+    RegisterProvider
   ]
 })
 export class AppModule { }

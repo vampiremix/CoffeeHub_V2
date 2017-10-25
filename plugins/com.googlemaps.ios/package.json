@@ -19,7 +19,7 @@
           "directUrl": "https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps-sdk/master/package.json"
         }
       },
-      "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub"
+      "/Users/notcha/Desktop/work/CoffeeHub_V2"
     ]
   ],
   "_from": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
@@ -50,10 +50,10 @@
     "/"
   ],
   "_resolved": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#0addb071b77be74cc1813cedea0797a207522628",
-  "_shasum": "dda31c951a816bed62531732690561c4e4a365f5",
+  "_shasum": "23fbd5503f38c6b3598632a86ae944b26ba2b966",
   "_shrinkwrap": null,
   "_spec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk",
-  "_where": "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub",
+  "_where": "/Users/notcha/Desktop/work/CoffeeHub_V2",
   "author": {
     "name": "Masashi Katsumata, Hirbod Mirjavadi"
   },

@@ -9,10 +9,10 @@ page-premium-product {
         margin-top: 0.7em;
         color: white;
     }
-    .cup-coim {
+    .cup-coin {
         text-align: center;
-        font-size: 20px;
-        margin-top: 0px;
+        font-size: 1.2em;
+        margin-top: -1vh;
         font-family: 'Kanit', sans-serif;
         color: white;
     }
@@ -21,7 +21,7 @@ page-premium-product {
         widows: 250px !important;
     }
     .img-sl {
-        margin-top: 100px;
+        margin-top: 8vh;
     }
     .text-aling h2 {
         text-align: center;
@@ -39,5 +39,8 @@ page-premium-product {
         border: solid 0.1em;
         border-color: white;
        
+    }
+    [slide-height]{
+        height: 65vh;
     }
 }

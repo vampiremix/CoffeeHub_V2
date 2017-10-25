@@ -10,7 +10,7 @@
         "spec": ">=2.0.11 <3.0.0",
         "type": "range"
       },
-      "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub"
+      "/Users/notcha/Desktop/work/CoffeeHub_V2"
     ]
   ],
   "_from": "cordova-plugin-googlemaps@>=2.0.11 <3.0.0",
@@ -45,7 +45,7 @@
   "_shasum": "87f663e7c1e84e76edb9499513f84e836564790e",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-googlemaps@^2.0.11",
-  "_where": "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub",
+  "_where": "/Users/notcha/Desktop/work/CoffeeHub_V2",
   "author": {
     "name": "Masashi Katsumata, Hirbod Mirjavadi"
   },

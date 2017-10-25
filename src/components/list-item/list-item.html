@@ -1,0 +1,17 @@
+
+<ion-list>
+  <ion-item ion-item *ngFor="let item of items">
+    <ion-row>
+      <ion-col no-padding col-3 (click)="onClick(item)">
+        <div class="thumbnail">
+            <img [src]="item.image" alt="imgError">
+        </div>
+        
+      </ion-col>
+      <ion-col col-7 (click)="onClick(item)">
+        <h3 class="h3-name">{{item.name}}</h3>
+      </ion-col>
+      
+    </ion-row>
+  </ion-item>
+</ion-list>
