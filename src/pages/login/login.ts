@@ -1,3 +1,4 @@
+import { RegisterPage } from '../register/register';
 import { LoginEmailPage } from '../login-email/login-email';
 import { Component, ElementRef, ViewChild  } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -40,6 +41,9 @@ export class LoginPage {
   }
   gotoLoginEmail(){
     this.navCtrl.push(LoginEmailPage);
+  }
+  register(){
+    this.navCtrl.push(RegisterPage);
   }
 
   initMap() {

@@ -1,3 +1,4 @@
+import { RegisterPage } from '../pages/register/register';
 import { SearchbarComponent } from '../components/searchbar/searchbar';
 import { ListItemComponent } from '../components/list-item/list-item';
 import { NewProductPage } from '../pages/new-product/new-product';
@@ -42,6 +43,7 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
 import { RouteUrlProvider } from '../providers/route-url/route-url';
 
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { RegisterProvider } from '../providers/register/register';
 
 
 @NgModule({
@@ -69,7 +71,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     NewProductPage,
     ShopListPage,
     ListItemComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    RegisterPage
 
   ],
   imports: [
@@ -106,7 +109,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     NewProductPage,
     ShopListPage,
     ListItemComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    RegisterPage
   ],
   providers: [
     StatusBar,
@@ -118,7 +122,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDataApiProvider,
     AuthenticationProvider,
     RouteUrlProvider,
-    Facebook
+    Facebook,
+    RegisterProvider
   ]
 })
 export class AppModule { }
