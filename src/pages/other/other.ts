@@ -1,3 +1,4 @@
+import { RateCupcoinPage } from './../rate-cupcoin/rate-cupcoin';
 import { AboutPage } from './../about/about';
 import { ShopListPage } from '../shop-list/shop-list';
 import { Component } from '@angular/core';
@@ -26,5 +27,8 @@ export class OtherPage {
   }
   about(){
     this.navCtrl.push(AboutPage);
+  }
+  rateCupcoin(){
+    this.navCtrl.push(RateCupcoinPage);
   }
 }

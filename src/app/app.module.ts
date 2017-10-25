@@ -1,3 +1,4 @@
+import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
 import { NewProductPage } from '../pages/new-product/new-product';
 import { ShopListPage } from '../pages/shop-list/shop-list';
 import { SegmentButton } from 'ionic-angular/es2015';
@@ -65,7 +66,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDetailPage,
     LoginEmailPage,
     NewProductPage,
-    ShopListPage
+    ShopListPage,
+    RateCupcoinPage
 
   ],
   imports: [
@@ -100,7 +102,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDetailPage,
     LoginEmailPage,
     NewProductPage,
-    ShopListPage
+    ShopListPage,
+    RateCupcoinPage
   ],
   providers: [
     StatusBar,
