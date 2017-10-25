@@ -3,9 +3,11 @@ import { ListItemComponent } from './list-item/list-item';
 import { SearchbarComponent } from './searchbar/searchbar';
 @NgModule({
 	declarations: [ListItemComponent,
-    SearchbarComponent],
+    SearchbarComponent,
+    ],
 	imports: [],
 	exports: [ListItemComponent,
-    SearchbarComponent]
+    SearchbarComponent,
+    ]
 })
 export class ComponentsModule {}
