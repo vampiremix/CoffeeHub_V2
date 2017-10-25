@@ -15,39 +15,56 @@
 
 <ion-content padding>
 
-  <h2 class="auth-title">CREATE_AN_ACCOUNT</h2>
-  <form class="signup-form auth-form" [formGroup]="signup" (ngSubmit)="doSignup()">
+  <h2 class="auth-title" text-center>CREATE ACCOUNT</h2>
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12 text-center>       
+            <img img-size src="./assets/icon/Profile_img2-01.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+            <button ion-button round outline>CHANGE PROFILE PICTURE</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  <form class="signup-form" [formGroup]="signup" (ngSubmit)="doSignup()">
+ 
     <ion-item>
-      <ion-input type="username" placeholder="Username" formControlName="username"></ion-input>
+      <ion-label floating class="color-placeholder" ><ion-icon name="contact"></ion-icon> Username</ion-label>
+      <ion-input type="username"  formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating class="color-placeholder" ><ion-icon name="unlock"></ion-icon> Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating class="color-placeholder" ><ion-icon name="unlock"></ion-icon> Confirm password</ion-label>
+      <ion-input type="password"  formControlName="confirm_password"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-label floating class="color-placeholder" >Firstname</ion-label>
+      <ion-input type="firstName"  formControlName="firstName"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" placeholder="Confirm password" formControlName="confirm_password"></ion-input>
+        <ion-label floating class="color-placeholder" >Lastname</ion-label>
+      <ion-input type="lastName"  formControlName="lastName"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="firstName" placeholder="Firstname" formControlName="firstName"></ion-input>
+        <ion-label floating class="color-placeholder" ><ion-icon name="at"></ion-icon> Email</ion-label>
+      <ion-input type="email"  formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="lastName" placeholder="Lastname" formControlName="lastName"></ion-input>
+        <ion-label floating class="color-placeholder" ><ion-icon name="logo-whatsapp"></ion-icon> Tel</ion-label>
+      <ion-input type="tel"  formControlName="tel"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="tel" placeholder="Tel" formControlName="tel"></ion-input>
-    </ion-item>
-    <button ion-button block class="auth-action-button signup-button" type="submit" [disabled]="!signup.valid">SIGN_UP</button>
+    <button ion-button block class="auth-action-button signup-button" type="submit" [disabled]="!signup.valid">SIGN UP</button>
   </form>
   <p class="auth-divider">
-      Or
-    </p>
+    Or
+  </p>
   <button ion-button block class="facebook-auth-button" (click)="doFacebookSignup()">SIGN UP WITH FACEBOOK</button>
-  <!-- <button ion-button block class="google-auth-button" (click)="doGoogleSignup()">{{'SIGN_UP_WITH_GOOGLE' | translate}}</button>
-    <button ion-button block class="twitter-auth-button" (click)="doTwitterSignup()">{{'SIGN_UP_WITH_TWITTER' | translate}}</button> -->
-  <!-- <p class="legal-stuff">
-      {{'AGREEMENT_TEXT' | translate}} <a class="legal-action" (click)="showPrivacyModal()">{{'PRIVACY_POLICY' | translate}}</a>    {{'AND' | translate}} <a class="legal-action" (click)="showTermsModal()">{{'TERMS_OF_USE' | translate}}</a>
-    </p>  -->
 
 </ion-content>

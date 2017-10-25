@@ -1,7 +1,28 @@
 page-register {
-    
-    .auth-divider{
+    ion-content{
+        background-color: #f0f0f0 !important;
+    }
+    .auth-title {
+        color: rgb(151, 144, 129);
+        margin-top: 25px !important;
+    }
+    .auth-divider {
         text-align: center;
     }
+    [img-size] {
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+        border: 1 white;
+    }
+    .color-placeholder {
+        color: rgb(151, 144, 129);
+    }
 
+    // signup-form{
+        
+    // }
+    .item-ios{
+        background-color:  #f0f0f0;
+    }
 }

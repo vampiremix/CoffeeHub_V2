@@ -18,6 +18,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class RegisterPage {
 
   signup: FormGroup;
+  chosenPicture = "https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/21314397_1410273562383607_9014405429036635307_n.jpg?oh=00bac870110c20fe9fa3af26eb47fb63&oe=5A22E023";
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -32,7 +33,8 @@ export class RegisterPage {
       tel: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
       confirm_password: new FormControl('', Validators.required),
-      roles: new FormControl('user', Validators.required)
+      roles: new FormControl('user', Validators.required),
+      profileImageURL: new FormControl(this.chosenPicture, Validators.required),
     });
   }
 
@@ -48,7 +50,8 @@ export class RegisterPage {
       lastName: this.signup.value.lastName,
       email: this.signup.value.email,
       tel: this.signup.value.tel,
-      password: this.signup.value.password
+      password: this.signup.value.password,
+      profileImageURL: this.signup.value.profileImageURL
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.signup.value.email)) {
       if (this.signup.value.password.length < 7) {
@@ -56,7 +59,7 @@ export class RegisterPage {
       } else if (this.signup.value.password !== this.signup.value.confirm_password) {
         alert("Passwords do not match")
       } else {
-        this.registerProvider.newAuthorization(data).then((res)=>{
+        this.registerProvider.newAuthorization(data).then((res) => {
           localStorage.setItem('user', JSON.stringify(res));
           this.nav.pop();
         }).catch(err => {

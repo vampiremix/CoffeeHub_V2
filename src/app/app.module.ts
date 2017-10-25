@@ -72,8 +72,7 @@ import { RegisterProvider } from '../providers/register/register';
     ShopListPage,
     ListItemComponent,
     SearchbarComponent,
-    RegisterPage
-
+    RegisterPage,
   ],
   imports: [
     BrowserModule,
