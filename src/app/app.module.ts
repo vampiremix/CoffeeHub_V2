@@ -81,7 +81,9 @@ import { RegisterProvider } from '../providers/register/register';
     HttpModule,
     Ionic2RatingModule,
     IonicModule.forRoot(MyApp, {
-      SegmentButton: 'segment'
+      SegmentButton: 'segment',
+      mode: 'ios'
+
     }),
     NgxQRCodeModule
   ],

@@ -17,7 +17,8 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'login-email.html',
 })
 export class LoginEmailPage {
-
+username = "amonratCha";
+password = "P@ssw0rd1234"
   public backgroundImage = 'assets/image/login-bg.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public authPVD: AuthenticationProvider,
@@ -52,7 +53,7 @@ export class LoginEmailPage {
       }).catch((err) => {
         loading.dismiss();
         let errMsg = JSON.parse(err._body)
-        alert("Login error : " + errMsg.message);
+        alert("Login fail! : " + errMsg.message);
       });
     } else {
       alert("Please fill email and password");

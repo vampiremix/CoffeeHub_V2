@@ -24,4 +24,17 @@ page-login-email {
         border-radius: 1.5em;
         width: 80%;
     }
+    ion-label[fixed] {
+       
+        flex: 0 0 60px;
+        width: 60px;
+        min-width: 77px;
+        max-width: 149px;
+    }
+    .item-input .label-md {
+        color: #000000;
+    }
+    .item-input .label-ios {
+        color: #000000;
+    }
 }
