@@ -1,3 +1,4 @@
+import { FavoritePage } from './../pages/favorite/favorite';
 import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
 import { RegisterPage } from '../pages/register/register';
 import { SearchbarComponent } from '../components/searchbar/searchbar';
@@ -75,6 +76,7 @@ import { RegisterProvider } from '../providers/register/register';
     ListItemComponent,
     SearchbarComponent,
     RegisterPage,
+    FavoritePage
   ],
   imports: [
     BrowserModule,
@@ -114,7 +116,8 @@ import { RegisterProvider } from '../providers/register/register';
     RateCupcoinPage,
     ListItemComponent,
     SearchbarComponent,
-    RegisterPage
+    RegisterPage,
+    FavoritePage
   ],
   providers: [
     StatusBar,
