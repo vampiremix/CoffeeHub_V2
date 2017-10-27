@@ -1,3 +1,4 @@
+import { FavoritePage } from './../favorite/favorite';
 import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -22,9 +23,10 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
-
-
-
+  favorite(){
+    this.navCtrl.push(FavoritePage);
+  
+  }
   Logout() {
     this.navCtrl.setRoot(LoginPage);
   }
