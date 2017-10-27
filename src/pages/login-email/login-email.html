@@ -9,7 +9,7 @@
       <ion-col text-center col-11>
         <ion-item>
           <ion-label fixed>Email</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -17,13 +17,13 @@
       <ion-col text-center col-11>
         <ion-item>
           <ion-label fixed>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
       <ion-col text-center col-11>
-        <button ion-button block (click)="EmailLogin()">เข้าสู่ระบบ</button>
+        <button ion-button block (click)="EmailLogin(username,password)">เข้าสู่ระบบ</button>
       </ion-col>
     </ion-row>
     <ion-row>

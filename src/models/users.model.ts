@@ -11,8 +11,19 @@ export class UsersModel {
   phone: string;
   profileImageURL: string;
   provider: string;
-  roles: Array<string>;
+  roles: string;
   shop: Array<ShopsModel>;
   updated: Date;
   created: Date;
+}
+
+export class FaceBookUserModel {
+  email: string;
+  id: string;
+  fisrt_name: string;
+  last_name: string;
+  name: string;
+  picture: {
+    data: { url: string; }
+  }
 }

@@ -5,7 +5,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+
+
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -27,8 +29,7 @@ export class LoginPage {
 
   public backgroundImage = 'assets/image/login-bg.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private authenPVD: AuthenticationProvider,
-    private fb: Facebook
+    private authenPVD: AuthenticationProvider
   ) {
 
   }
@@ -85,16 +86,7 @@ export class LoginPage {
     });
   }
 
-  fblogin() {
-    this.fb.login(['public_profile', 'user_friends', 'email'])
-      .then((res: FacebookLoginResponse) => {
-        alert('Logged into Facebook! : ' + JSON.stringify(res));
-        this.fb.api('me?fields=email,id,first_name,name,last_name,picture.width(600).height(600)',null).then((resData)=>{ alert(" DATA : " + JSON.stringify(resData))});
-      }
-
-
-      )
-      .catch(e => alert('Error logging into Facebook : ' + e));
-    // this.authenPVD.facebookLogin().then((data) => { alert("FB : " + data) }).catch((err) => { alert("Err FB : " + err) });
+  fblogin(){
+    this.authenPVD.facebookLogin();
   }
 }
