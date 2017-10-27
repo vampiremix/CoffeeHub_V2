@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Athiti');
+
+    
+page-rate-cupcoin {
+    .scroll-content{
+        background-image: url("../assets/image/BG-other2.jpg") !important;
+        background-size: 100% 100% !important; 
+    }
+    .fontText {
+        
+        font-family: 'Mitr', sans-serif; // font-family: 'Fredoka One', cursive;
+    }
+    
+    .fab ion-icon {
+        color: white;
+    }
+    .fab {
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+    }
+    #div{
+        padding-top: 20px;
+        color: white;
+        font-size: 15px
+    }
+    #BG{
+        background-color: rgba(245, 222, 179, 0.24);
+        padding: 16px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+}

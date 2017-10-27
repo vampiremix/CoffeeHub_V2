@@ -1,3 +1,4 @@
+import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
 import { RegisterPage } from '../pages/register/register';
 import { SearchbarComponent } from '../components/searchbar/searchbar';
 import { ListItemComponent } from '../components/list-item/list-item';
@@ -70,6 +71,7 @@ import { RegisterProvider } from '../providers/register/register';
     LoginEmailPage,
     NewProductPage,
     ShopListPage,
+    RateCupcoinPage,
     ListItemComponent,
     SearchbarComponent,
     RegisterPage,
@@ -107,6 +109,7 @@ import { RegisterProvider } from '../providers/register/register';
     LoginEmailPage,
     NewProductPage,
     ShopListPage,
+    RateCupcoinPage,
     ListItemComponent,
     SearchbarComponent,
     RegisterPage
