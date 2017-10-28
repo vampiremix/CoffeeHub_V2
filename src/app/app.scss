@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-spinner {
+    position: static;
+    text-align: center;
+    display: inline;
+}
+
+.loading-ios .loading-wrapper {
+    padding: 18px 18px 18px 18px;
+}
+
+.custom-spinner-container {
+    position: static;
+    margin-left: -15px;
+    height: 65px;
+    width: 65px;
+}

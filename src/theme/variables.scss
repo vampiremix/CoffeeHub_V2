@@ -21,6 +21,10 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
+.header{
+  padding-top: 3vh;
+}
+
 
 $tabs-background: #4f3222;
 
@@ -83,8 +87,8 @@ $colors: (
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-$navbar-ios-height: 9vh;
-$toolbar-ios-height: 9vh;
+
+
 $toolbar-background: #4f3222;
 
 $tabs-ios-tab-color-active: #feffde;
@@ -94,8 +98,6 @@ $fab-ios-background-color-activated: darkgrey;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-$navbar-md-height: 9vh;
-$toolbar-md-height: 9vh;
 $toolbar-md-background: #4f3222;
 
 // $tabs-md-tab-color-active: #ffffff;

@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
@@ -16,6 +17,8 @@ import { ShopLocationPage } from '../shop-location/shop-location';
   templateUrl: 'promotion.html',
 })
 export class PromotionPage {
+  page = "Promotion";
+  user;
   list = ['./assets/image/promotion_pic_new.png',
   './assets/image/promotion_pic_new.png',
   './assets/image/promotion_pic_new.png',
@@ -23,6 +26,7 @@ export class PromotionPage {
   './assets/image/promotion_pic_new.png'];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user =  window.localStorage.getItem('user');
   }
 
   ionViewDidLoad() {

@@ -1,7 +1,7 @@
 import { RegisterPage } from '../register/register';
 import { LoginEmailPage } from '../login-email/login-email';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
@@ -29,7 +29,8 @@ export class LoginPage {
 
   public backgroundImage = 'assets/image/login-bg.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private authenPVD: AuthenticationProvider
+    private authenPVD: AuthenticationProvider,
+    public loadingCtrl: LoadingController
   ) {
 
   }
@@ -43,7 +44,7 @@ export class LoginPage {
   gotoLoginEmail() {
     this.navCtrl.push(LoginEmailPage);
   }
-  register(){
+  register() {
     this.navCtrl.push(RegisterPage);
   }
 
@@ -86,7 +87,20 @@ export class LoginPage {
     });
   }
 
-  fblogin(){
-    this.authenPVD.facebookLogin();
+  fblogin() {
+    const loading = this.loadingCtrl.create({
+      spinner: 'crescent',
+      content: `
+        <div class="custom-spinner-container">
+          <div><img src='./assets/image/gif2.gif'></div>
+        </div>`
+    });
+    loading.present();
+    this.authenPVD.facebookLogin().then((data) => {
+      loading.dismiss();
+    }).catch((err) => {
+      loading.dismiss();
+    });
   }
+
 }
