@@ -12,7 +12,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class RegisterProvider {
 
-  apiUrl: string = 'https://coffeehubserver-test.herokuapp.com/';
+  apiUrl: string = 'https://coffeehubserver.herokuapp.com/';
   headers = new Headers({
     'Content-Type': 'application/json'
   });
