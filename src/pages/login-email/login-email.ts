@@ -1,3 +1,4 @@
+import { RegisterPage } from '../register/register';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
 import { TabsPage } from '../tabs/tabs';
 import { Component } from '@angular/core';
@@ -74,4 +75,8 @@ export class LoginEmailPage {
 
 
   }
+  gotoRegister(){
+    this.navCtrl.push(RegisterPage);
+  }
+
 }

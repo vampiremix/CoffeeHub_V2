@@ -23,11 +23,12 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
-  favorite(){
+  favorite() {
     this.navCtrl.push(FavoritePage);
-  
+
   }
   Logout() {
-    this.navCtrl.setRoot(LoginPage);
+    window.localStorage.removeItem('user');
+    this.navCtrl.parent.parent.setRoot(LoginPage);
   }
 }

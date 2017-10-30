@@ -7,23 +7,23 @@
   <ion-grid grid-style padding-top>
     <ion-row justify-content-center>
       <ion-col text-center col-11>
-        <ion-item>
-          <ion-label fixed>Email</ion-label>
+        <ion-item transparent>
+          <ion-label floating>Email</ion-label>
           <ion-input type="text" [(ngModel)]="username"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
       <ion-col text-center col-11>
-        <ion-item>
-          <ion-label fixed>Password</ion-label>
+        <ion-item transparent>
+          <ion-label floating>Password</ion-label>
           <ion-input type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
       <ion-col text-center col-11>
-        <button ion-button block (click)="EmailLogin(username,password)">เข้าสู่ระบบ</button>
+        <button ion-button block color="dark-brown"  (click)="EmailLogin(username,password)">เข้าสู่ระบบ</button>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -37,7 +37,7 @@
   <ion-grid position>
     <ion-row justify-content-center row-width>
       <ion-col text-center col-8>
-        <button ion-button block outline color="light" (click)="gotoHomePage()">สมัครสมาชิก</button>
+        <button ion-button block outline color="light" (click)="gotoRegister()">สมัครสมาชิก</button>
       </ion-col>
     </ion-row>
   </ion-grid>

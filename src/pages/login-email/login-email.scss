@@ -11,7 +11,7 @@ page-login-email {
     }
     [position] {
         position: absolute;
-        bottom: 10%;
+        bottom: 3vh;
     }
     [paddingTop] {
         padding-top: 5em;
@@ -32,10 +32,16 @@ page-login-email {
         max-width: 149px;
     }
     .item-input .label-md {
-        color: #000000;
+        color: #ffffff;
     }
     .item-input .label-ios {
-        color: #000000;
+        color: #ffffff;
+    }
+    .item-input ion-input{
+        color: blanchedalmond;
+    }
+    [transparent]{
+        background-color: transparent;
     }
 
 }

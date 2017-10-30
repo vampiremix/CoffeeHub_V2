@@ -19,11 +19,11 @@ import { ShopLocationPage } from '../shop-location/shop-location';
 export class PromotionPage {
   page = "Promotion";
   user;
-  list = ['./assets/image/promotion_pic_new.png',
-  './assets/image/promotion_pic_new.png',
-  './assets/image/promotion_pic_new.png',
-  './assets/image/promotion_pic_new.png',
-  './assets/image/promotion_pic_new.png'];
+  list = ['./assets/image/promotion/promotion G2.jpg',
+  './assets/image/promotion/promotion G2.jpg',
+  './assets/image/promotion/promotion G2.jpg',
+  './assets/image/promotion/promotion G2.jpg',
+  './assets/image/promotion/promotion G2.jpg'];
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.user =  window.localStorage.getItem('user');
