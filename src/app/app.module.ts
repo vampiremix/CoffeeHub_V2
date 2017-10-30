@@ -34,7 +34,7 @@ import { ActivityPage } from '../pages/activity/activity';
 import { PaymentPincodePage } from '../pages/payment-pincode/payment-pincode';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+// import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from '@ionic-native/geolocation';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { LoginPage } from '../pages/login/login';
@@ -125,7 +125,7 @@ import { RegisterProvider } from '../providers/register/register';
   providers: [
     StatusBar,
     SplashScreen,
-    BarcodeScanner,
+    // BarcodeScanner,
     Geolocation,
     LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },

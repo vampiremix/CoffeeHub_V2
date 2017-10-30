@@ -1,0 +1,14 @@
+<!--
+  Generated template for the TopUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" no-bounce>
+    <ion-fab right>
+        <button ion-fab mini (click)="closePage()"><ion-icon name="md-close-circle"></ion-icon></button>
+      </ion-fab>
+  <ion-card *ngIf="qrcode" card-positon>
+    <ngx-qrcode [qrc-value]="qrcode"></ngx-qrcode>
+  </ion-card>
+</ion-content>
