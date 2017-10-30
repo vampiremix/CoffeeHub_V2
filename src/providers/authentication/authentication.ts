@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { RouteUrlProvider } from '../route-url/route-url';
 import { UsersModel } from '../../models/users.model';
@@ -21,17 +21,17 @@ export class AuthenticationProvider {
     console.log('Hello AuthenticationProvider Provider');
   }
 
-  signin(logindata): Promise<UsersModel> {
-    return new Promise((resolve, reject) => {
-      this.http.post(this.routeurl.apiUrl + 'api/auth/signin', logindata, this.routeurl.optionsURL).map(res => {
-        return res.json();
-      }).subscribe(data => {
-        resolve(data as Promise<UsersModel>);
-      }, (error) => {
-        reject(error);
-      });
-    })
-  }
+  // signin(logindata): Promise<UsersModel> {
+  //   return new Promise((resolve, reject) => {
+  //     this.http.post(this.routeurl.apiUrl + 'api/auth/signin', logindata, this.routeurl.optionsURL).map(res => {
+  //       return res.json();
+  //     }).subscribe(data => {
+  //       resolve(data as Promise<UsersModel>);
+  //     }, (error) => {
+  //       reject(error);
+  //     });
+  //   })
+  // }
 
   facebookLogin(): Promise<any> {
     return new Promise((loginSuccess, loginError) => {
@@ -55,5 +55,40 @@ export class AuthenticationProvider {
         });
 
     })
+  }
+
+  //----------------------------------------token------------------------------------------------//
+
+  createAuthorizationHeader(headers: Headers) {
+    headers.append('Authorization', window.localStorage.getItem('token'));
+  }
+
+  private() {
+    let headers = new Headers();
+    this.createAuthorizationHeader(headers);
+    return this.http.get(this.routeurl.apiUrl + 'api/users/me', {
+      headers: headers
+    }).map(res => {
+      res.json()
+    });
+  }
+  signin(logindata) {
+    return this.http.post(this.routeurl.apiUrl + "api/auth/signin", logindata).map(this.extractData);
+  }
+  isLogged() {
+    if (window.localStorage.getItem('token')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  logout() {
+    window.localStorage.removeItem('token');
+    return this.http.get(this.routeurl.apiUrl + "api/auth/signout").map(this.extractData);;
+  }
+  private extractData(res: Response) {
+    let body = res.json();
+    window.localStorage.setItem('token', body.loginToken);
+    return body || {};
   }
 }
