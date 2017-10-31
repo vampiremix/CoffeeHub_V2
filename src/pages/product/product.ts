@@ -1,3 +1,4 @@
+import { ProductDetailPage } from '../product-detail/product-detail';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -132,6 +133,10 @@ export class ProductPage {
 
   ionViewDidLoad() {
     
+  }
+
+  productDetail(){
+      this.navCtrl.push(ProductDetailPage)
   }
 
 }
