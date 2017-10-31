@@ -16,17 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class PremiumProductPage {
 
   public backgroundImage = './assets/image/premium_2.jpg';
+  public user;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = JSON.parse(window.localStorage.getItem('user'));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PremiumProductPage');
   }
-  sell(){
+  sell() {
     alert("แปป นะครับ ยังไม่เสร็จ T_T !! ");
   }
-  closePage(){
+  closePage() {
     this.navCtrl.pop();
   }
 }
