@@ -1,12 +1,16 @@
 <!-- Generated template for the HeaderToolbarComponent component -->
 <ion-toolbar tool-height >
   <ion-buttons start>
-    <button ion-button (click)="gotoProfile()">
+    <button ion-button (click)="gotoProfile()" *ngIf="user">
       <ion-avatar item-start>
-        <!-- <img src="./assets/icon/Profile_img2-01.png"> -->
-        <img src="{{user.profileImageURL}}">
+        <img src="{{user.profileImageURL}}" >
       </ion-avatar>
     </button>
+    <button ion-button (click)="gotoLogin()" *ngIf="!user">
+        <ion-avatar item-start>
+          <img src="./assets/icon/Profile_img2-01.png">
+        </ion-avatar>
+      </button>
   </ion-buttons>
   <ion-title text-center *ngIf="title">
     {{title}}

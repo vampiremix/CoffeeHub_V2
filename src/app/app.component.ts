@@ -14,14 +14,16 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = LoginPage;
+  rootPage: any = TabsPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth: AuthenticationProvider) {
     { let user = JSON.parse(window.localStorage.getItem('user'));
-      if (this.auth.isLogged() === true && user) {
-        this.rootPage = TabsPage;
-      } else {
-        this.rootPage = LoginPage;
-      }
+     
+    
+    // if (this.auth.isLogged() === true) {
+    //     this.rootPage = TabsPage;
+    //   } else {
+    //     this.rootPage = LoginPage;
+    //   }
       platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
         // Here you can do any higher level native things you might need.

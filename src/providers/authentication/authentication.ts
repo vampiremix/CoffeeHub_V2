@@ -95,7 +95,6 @@ export class AuthenticationProvider {
       this.http.post(this.routeurl.apiUrl + 'api/auth/signup', signupData, this.routeurl.optionsURL).map(res => {
         return res.json();
       }).subscribe(data => {
-        window.localStorage.setItem('user', JSON.stringify(data));
         resolve(data as Promise<UsersModel>);
 
       }, (error) => {

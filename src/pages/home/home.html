@@ -28,7 +28,7 @@
   <div #map id="map"></div>
 
   <!-- --------------- POINT BANNER WITH USER --------------- -->
-  <ion-card class="card-background-page" (click)="popupActivities()">
+  <ion-card class="card-background-page" *ngIf="user" (click)="popupActivities()">
     <ion-row justify-content-center>
       <ion-col col-6 justify-content-center>
         <div point-style>{{user.cupcoin}}</div>
@@ -44,10 +44,10 @@
 
   <!-- --------------- POINT BANNER WITHOUT USER--------------- -->
 
-  <!-- <ion-card class="card-background-page" (click)="popupActivities()">
+  <ion-card class="card-background-page" (click)="gotoLogin()" *ngIf="!user">
     <img src="./assets/image/login.jpg" />
 
-  </ion-card> -->
+  </ion-card>
 
   <!-- --------------- POINT BANNER WITHOUT USER--------------- -->
 

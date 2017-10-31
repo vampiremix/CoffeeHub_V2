@@ -1,3 +1,4 @@
+import { LoginPage } from '../login/login';
 import { ShopListPage } from '../shop-list/shop-list';
 import { NewProductPage } from '../new-product/new-product';
 import { PremiumProductPage } from '../premium-product/premium-product';
@@ -34,7 +35,9 @@ export class HomePage {
     public authPVD: AuthenticationProvider
 
   ) {
+    
     this.user = JSON.parse(window.localStorage.getItem('user'));
+    
     this.dataListX = [{
       link: ShopLocationPage,
       image: './assets/image/SL4.jpg'
@@ -113,6 +116,9 @@ export class HomePage {
   }
   gotoPage(Page) {
     this.navCtrl.push(Page);
+  }
+  gotoLogin(){
+    this.navCtrl.parent.parent.setRoot(LoginPage);
   }
   gotoShopList() {
     this.navCtrl.push(ShopDetailPage);

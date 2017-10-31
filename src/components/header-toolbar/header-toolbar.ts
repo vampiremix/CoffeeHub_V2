@@ -1,3 +1,4 @@
+import { LoginPage } from '../../pages/login/login';
 import { ShopLocationPage } from '../../pages/shop-location/shop-location';
 import { ProfilePage } from '../../pages/profile/profile';
 import { Events, NavController } from 'ionic-angular';
@@ -28,5 +29,8 @@ export class HeaderToolbarComponent {
   }
   location() {
     this.navCtrl.push(ShopLocationPage);
+  }
+  gotoLogin(){
+    this.navCtrl.parent.parent.setRoot(LoginPage);
   }
 }

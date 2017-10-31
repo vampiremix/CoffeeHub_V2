@@ -1,3 +1,4 @@
+import { HomePage } from '../home/home';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
 import { RegisterProvider } from '../../providers/register/register';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -107,6 +108,8 @@ export class RegisterPage {
       this.authenPVD.signup(sendLoginData).then((loginData) => {
         alert("LOGIN FB DATA FROM MEAN : " + JSON.stringify(loginData));
         loading.dismiss();
+        window.localStorage.setItem('user', JSON.stringify(data));
+        this.navCtrl.setRoot(HomePage);
       }).catch((ERR) => {
         alert("LOGIN FB DATA FROM MEAN ERR: " + JSON.stringify(ERR));
         loading.dismiss();
