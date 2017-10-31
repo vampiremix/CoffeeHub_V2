@@ -6,7 +6,6 @@ import { SearchbarComponent } from '../components/searchbar/searchbar';
 import { ListItemComponent } from '../components/list-item/list-item';
 import { NewProductPage } from '../pages/new-product/new-product';
 import { ShopListPage } from '../pages/shop-list/shop-list';
-import { SegmentButton } from 'ionic-angular/es2015';
 import { LoginEmailPage } from '../pages/login-email/login-email';
 import { ShopDetailPage } from '../pages/shop-detail/shop-detail';
 import { ProductPage } from '../pages/product/product';

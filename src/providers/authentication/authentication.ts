@@ -33,6 +33,19 @@ export class AuthenticationProvider {
     })
   }
 
+  updateUserdata(): Promise<UsersModel>{
+    return new Promise((resolve, reject) => {
+      this.http.get(this.routeurl.apiUrl + 'api/users/me', this.routeurl.optionsURL).map(res => {
+        return res.json();
+      }).subscribe(data => {
+        // alert("Me : " + JSON.stringify(data));
+        resolve(data as Promise<UsersModel>);
+      }, (error) => {
+        reject(error);
+      });
+    })
+  }
+
   facebookLogin(): Promise<any> {
     return new Promise((loginSuccess, loginError) => {
       this.fb.login(['public_profile', 'user_friends', 'email'])

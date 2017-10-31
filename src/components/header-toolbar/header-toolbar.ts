@@ -1,6 +1,5 @@
 import { ShopLocationPage } from '../../pages/shop-location/shop-location';
 import { ProfilePage } from '../../pages/profile/profile';
-import { UsersModel } from '../../models/users.model';
 import { Events, NavController } from 'ionic-angular';
 import { Component, Input } from '@angular/core';
 

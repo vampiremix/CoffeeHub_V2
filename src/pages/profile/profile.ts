@@ -1,4 +1,3 @@
-import { UsersModel } from '../../models/users.model';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
 import { FavoritePage } from './../favorite/favorite';
 import { LoginPage } from '../login/login';

@@ -17,7 +17,6 @@ export class ProductPage {
   tabs: number = 0;
   pet = "dinks";
   @ViewChild('myElement') element: ElementRef;
-  private dataListX: Array<any> = [];
 
   product = 
   {
