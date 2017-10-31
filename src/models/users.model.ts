@@ -15,7 +15,7 @@ export class UsersModel {
   shop: Array<ShopsModel>;
   updated: Date;
   created: Date;
-  cupCoins: number;
+  cupcoin: number;
 }
 
 export class FaceBookUserModel {
