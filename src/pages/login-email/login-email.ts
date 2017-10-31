@@ -62,5 +62,8 @@ export class LoginEmailPage {
   gotoRegister() {
     this.navCtrl.push(RegisterPage);
   }
+  closePage(){
+    this.navCtrl.pop();
+  }
 
 }

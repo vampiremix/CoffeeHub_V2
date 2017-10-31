@@ -5,24 +5,32 @@ page-login-email {
         background-repeat: no-repeat;
         border-color: transparent;
     }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab{
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+       
+    }
     [font-style] {
         color: #ffffff;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     [position] {
         position: absolute;
         bottom: 3vh;
+        width: 100%;
     }
     [paddingTop] {
         padding-top: 7vh;
     }
-    [row-width] {
-        width: 100%;
-    }
+
     [grid-style] {
         background-color: rgba(129, 129, 129, 0.39);
         border-radius: 1.5em;
-        width: 80%;
+        // width: 80%;
     }
     ion-label[fixed] {
        
