@@ -22,7 +22,7 @@ declare var google;
   templateUrl: 'login.html',
 })
 export class LoginPage {
-////
+  ////
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop: any = [];
@@ -108,8 +108,24 @@ export class LoginPage {
         this.navCtrl.setRoot(TabsPage);
       }).catch((ERR) => {
         let msgERR = JSON.parse(ERR._body);
-        if(msgERR.message == "Unknown user"){
-          alert("No user");
+        if (msgERR.message == "Invalid username or password") {
+          let sendSignUp = {
+            username: this.authenPVD.fbUser.email,
+            password: "P@ssw0rd1234",
+            firstName: this.authenPVD.fbUser.first_name,
+            lastName: this.authenPVD.fbUser.last_name,
+            displayName: this.authenPVD.fbUser.name,
+            email: this.authenPVD.fbUser.email,
+            profileImageURL: this.authenPVD.fbUser.picture.data.url
+          }
+          this.authenPVD.signup(sendSignUp).then((success) => {
+            loading.dismiss();
+            alert("Registered User");
+            this.navCtrl.setRoot(TabsPage);
+          }).catch((regErr) => {
+            let ErrMsg = JSON.parse(regErr._body)
+            alert("Register User ERROR : " + ErrMsg.message);
+          })
         }
         alert("LOGIN FB DATA FROM MEAN ERR: " + JSON.stringify(ERR));
         loading.dismiss();

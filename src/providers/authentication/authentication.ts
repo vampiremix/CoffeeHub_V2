@@ -37,12 +37,12 @@ export class AuthenticationProvider {
     return new Promise((loginSuccess, loginError) => {
       this.fb.login(['public_profile', 'user_friends', 'email'])
         .then((res: FacebookLoginResponse) => {
-          alert('Logged into Facebook! : ' + JSON.stringify(res));
+          // alert('Logged into Facebook! : ' + JSON.stringify(res));
           this.fb.api('me?fields=email,id,first_name,name,last_name,picture.width(600).height(600)', null).then(
             (resData) => {
               this.fbUser = resData;
               loginSuccess(resData as Promise<any>);
-              alert(" DATA : " + JSON.stringify(resData));
+              // alert(" DATA : " + JSON.stringify(resData));
             }).catch((err) => {
               loginError(err as Promise<any>);
               alert("ไม่สามารถล็อคอินเข้าสู่ระบบด้วย Facebook ได้");
