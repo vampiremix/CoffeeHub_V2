@@ -1,5 +1,5 @@
 <ion-header>
-    <header-toolbar ></header-toolbar>
+  <header-toolbar></header-toolbar>
   <!-- <ion-navbar nav-height>
     <ion-buttons start>
       <button ion-button (click)="gotoProfile()" button-size>
@@ -20,13 +20,18 @@
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content closeDuration="300" pullingIcon="arrow-dropdown" pullingText="เลื่อนลงอัพเดทข้อมูล" refreshingSpinner="crescent"
+      refreshingText="กำลังอัพเดทข้อมูล...">
+    </ion-refresher-content>
+  </ion-refresher>
   <div #map id="map"></div>
 
   <!-- --------------- POINT BANNER WITH USER --------------- -->
   <ion-card class="card-background-page" (click)="popupActivities()">
     <ion-row justify-content-center>
       <ion-col col-6 justify-content-center>
-        <div point-style>9</div>
+        <div point-style>{{user.cupcoin}}</div>
       </ion-col>
     </ion-row>
 
@@ -53,7 +58,7 @@
   <!-- --------------- PROMOTION BLOCK --------------- -->
   <div>
     <h4 no-margin class="categories-title">โปรโมชั่นแนะนำ
-     
+
     </h4>
     <div>
       <ion-scroll scrollX="true" class="slide-x1">

@@ -22,7 +22,7 @@ export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop: any = [];
-
+  public user;
   private dataListX: Array<any> = [];
   private promotionData: Array<any> = [];
   private promotionData2: Array<any> = [];
@@ -31,8 +31,10 @@ export class HomePage {
   public localationData;
   constructor(public navCtrl: NavController, public modalCtrl: ModalController,
     public locationPVD: LocationProvider,
-  
+    public authPVD: AuthenticationProvider
+
   ) {
+    this.user = JSON.parse(window.localStorage.getItem('user'));
     this.dataListX = [{
       link: ShopLocationPage,
       image: './assets/image/SL4.jpg'
@@ -115,6 +117,17 @@ export class HomePage {
   gotoShopList() {
     this.navCtrl.push(ShopDetailPage);
   }
+  doRefresh($event) {
+    this.authPVD.updateUserdata().then(
+      (data) => {
+        this.user = data;
+        window.localStorage.setItem('user', JSON.stringify(data));
+      }
+    ).catch((Err) => {
+      alert("เกิดข้อผิดพลาดระหว่างการอัพเดทข้อมูล");
+    });
+  }
+
 
   ionViewDidLoad() {
     this.initMap();
@@ -157,5 +170,5 @@ export class HomePage {
     this.navCtrl.push(ShopListPage);
   }
 
-  
+
 }
