@@ -22,7 +22,7 @@ declare var google;
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+////
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop: any = [];
