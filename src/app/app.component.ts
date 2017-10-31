@@ -1,3 +1,4 @@
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 
@@ -15,8 +16,8 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   rootPage: any = LoginPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth: AuthenticationProvider) {
-    {
-      if (this.auth.isLogged() === true) {
+    { let user = JSON.parse(window.localStorage.getItem('user'));
+      if (this.auth.isLogged() === true && user) {
         this.rootPage = TabsPage;
       } else {
         this.rootPage = LoginPage;

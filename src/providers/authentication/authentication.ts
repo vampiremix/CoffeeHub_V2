@@ -38,7 +38,7 @@ export class AuthenticationProvider {
       this.http.get(this.routeurl.apiUrl + 'api/users/me', this.routeurl.optionsURL).map(res => {
         return res.json();
       }).subscribe(data => {
-        // alert("Me : " + JSON.stringify(data));
+        alert("Me : " + JSON.stringify(data));
         resolve(data as Promise<UsersModel>);
       }, (error) => {
         reject(error);
