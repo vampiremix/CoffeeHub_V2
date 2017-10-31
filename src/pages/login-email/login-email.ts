@@ -48,10 +48,10 @@ export class LoginEmailPage {
       // alert(credential);
       this.authPVD.signin(credential).subscribe(res => {
         if (res.roles[0] !== "user") {
-          // loading.dismiss();
+          loading.dismiss();
           alert("This user is not authorize");
         } else {
-          // loading.dismiss();
+          loading.dismiss();
           window.localStorage.setItem('user', JSON.stringify(res));
           this.navCtrl.setRoot(TabsPage);
         }
