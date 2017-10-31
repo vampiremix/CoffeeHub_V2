@@ -13,7 +13,7 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 */
 @Injectable()
 export class AuthenticationProvider {
-  private fbUser: FaceBookUserModel;
+  public fbUser: FaceBookUserModel;
 
   constructor(public http: Http,
     private fb: Facebook,
@@ -21,17 +21,17 @@ export class AuthenticationProvider {
     console.log('Hello AuthenticationProvider Provider');
   }
 
-  // signin(logindata): Promise<UsersModel> {
-  //   return new Promise((resolve, reject) => {
-  //     this.http.post(this.routeurl.apiUrl + 'api/auth/signin', logindata, this.routeurl.optionsURL).map(res => {
-  //       return res.json();
-  //     }).subscribe(data => {
-  //       resolve(data as Promise<UsersModel>);
-  //     }, (error) => {
-  //       reject(error);
-  //     });
-  //   })
-  // }
+  signinMean(logindata): Promise<UsersModel> {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.routeurl.apiUrl + 'api/auth/signin', logindata, this.routeurl.optionsURL).map(res => {
+        return res.json();
+      }).subscribe(data => {
+        resolve(data as Promise<UsersModel>);
+      }, (error) => {
+        reject(error);
+      });
+    })
+  }
 
   facebookLogin(): Promise<any> {
     return new Promise((loginSuccess, loginError) => {
@@ -51,7 +51,7 @@ export class AuthenticationProvider {
         )
         .catch(e => {
           loginError(e as Promise<any>);
-          alert('Error logging into Facebook : ' + e)
+          alert('Error logging into Facebook : ' + JSON.stringify(e))
         });
 
     })
@@ -75,6 +75,22 @@ export class AuthenticationProvider {
   signin(logindata) {
     return this.http.post(this.routeurl.apiUrl + "api/auth/signin", logindata).map(this.extractData);
   }
+
+
+  signup(signupData): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.routeurl.apiUrl + 'api/auth/signup', signupData, this.routeurl.optionsURL).map(res => {
+        return res.json();
+      }).subscribe(data => {
+        window.localStorage.setItem('user', JSON.stringify(data));
+        resolve(data as Promise<UsersModel>);
+
+      }, (error) => {
+        reject(error);
+      });
+    })
+  }
+
   isLogged() {
     if (window.localStorage.getItem('token')) {
       return true;

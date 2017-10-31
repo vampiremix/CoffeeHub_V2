@@ -97,7 +97,23 @@ export class LoginPage {
     });
     loading.present();
     this.authenPVD.facebookLogin().then((data) => {
-      loading.dismiss();
+      let sendLoginData = {
+        username: this.authenPVD.fbUser.email,
+        password: 'P@ssw0rd1234'
+      }
+      this.authenPVD.signinMean(sendLoginData).then((loginData) => {
+        // alert("LOGIN FB DATA FROM MEAN : " + JSON.stringify(loginData));
+        loading.dismiss();
+        window.localStorage.setItem('user', JSON.stringify(loginData));
+        this.navCtrl.setRoot(TabsPage);
+      }).catch((ERR) => {
+        let msgERR = JSON.parse(ERR._body);
+        if(msgERR.message == "Unknown user"){
+          alert("No user");
+        }
+        alert("LOGIN FB DATA FROM MEAN ERR: " + JSON.stringify(ERR));
+        loading.dismiss();
+      })
     }).catch((err) => {
       loading.dismiss();
     });

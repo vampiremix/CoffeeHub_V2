@@ -38,7 +38,7 @@ export class ProfilePage {
 
   }
   Logout() {
-    // window.localStorage.removeItem('user');
+    window.localStorage.removeItem('user');
     // this.navCtrl.parent.parent.setRoot(LoginPage);
     this.auth.logout();
     this.app.getRootNav().setRoot(LoginPage);

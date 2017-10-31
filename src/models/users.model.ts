@@ -20,7 +20,7 @@ export class UsersModel {
 export class FaceBookUserModel {
   email: string;
   id: string;
-  fisrt_name: string;
+  first_name: string;
   last_name: string;
   name: string;
   picture: {

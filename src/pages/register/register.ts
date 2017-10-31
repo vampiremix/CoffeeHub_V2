@@ -1,7 +1,8 @@
+import { AuthenticationProvider } from '../../providers/authentication/authentication';
 import { RegisterProvider } from '../../providers/register/register';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, LoadingController, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the RegisterPage page.
@@ -23,6 +24,8 @@ export class RegisterPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private registerProvider: RegisterProvider,
+    private authenPVD: AuthenticationProvider,
+    public loadingCtrl: LoadingController,
     public nav: NavController) {
 
     this.signup = new FormGroup({
@@ -78,6 +81,40 @@ export class RegisterPage {
       alert('email incorrect')
     }
     console.log(this.signup.value);
+  }
+
+  doFacebookSignup() {
+    const loading = this.loadingCtrl.create({
+      spinner: 'crescent',
+      content: `
+        <div class="custom-spinner-container">
+          <div><img src='./assets/image/gif2.gif'></div>
+        </div>`
+    });
+    loading.present();
+    this.authenPVD.facebookLogin().then((data) => {
+      let sendLoginData = {
+        username:  this.authenPVD.fbUser.email,
+        password: "P@ssw0rd1234",
+        firstName: this.authenPVD.fbUser.first_name,
+        lastName: this.authenPVD.fbUser.last_name,
+        displayName: this.authenPVD.fbUser.name,
+        email: this.authenPVD.fbUser.email,
+        profileImageURL: this.authenPVD.fbUser.picture.data.url
+      }
+      // alert(" FB Mick log : " + JSON.stringify(sendLoginData));
+      // loading.dismiss();
+      this.authenPVD.signup(sendLoginData).then((loginData) => {
+        alert("LOGIN FB DATA FROM MEAN : " + JSON.stringify(loginData));
+        loading.dismiss();
+      }).catch((ERR) => {
+        alert("LOGIN FB DATA FROM MEAN ERR: " + JSON.stringify(ERR));
+        loading.dismiss();
+      })
+    }).catch((err) => {
+      alert("SEND FB ERR : " + JSON.stringify(err));
+      loading.dismiss();
+    });
   }
 
 }

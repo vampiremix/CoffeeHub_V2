@@ -32,50 +32,6 @@ export class LoginEmailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginEmailPage');
   }
-  // EmailLogin(getusername, getpassword) {
-
-  //   if (getusername !== "" && getpassword !== "") {
-
-  //     const loading = this.loadingCtrl.create({
-  //       spinner: 'crescent',
-  //       content: `
-  //         <div class="custom-spinner-container">
-  //           <div><img src='./assets/image/gif2.gif'></div>
-  //         </div>`
-  //     });
-  //     loading.present();
-
-  //     // const loading = this.loadingCtrl.create({
-  //     //   content: 'Signing in...',
-  //     //   spinner: 'crescent',
-  //     // });
-  //     // loading.present();
-  //     // alert(" USER : " + getusername + "\nPassword : " + getpassword);
-  //     let credential = { username: getusername, password: getpassword };
-  //     this.authPVD.signin(credential).then((successData) => {
-  //       console.log(successData);
-  //       if (successData.roles[0] !== "user") {
-  //         loading.dismiss();
-  //         alert("This user is not authorize");
-  //       } else {
-  //         loading.dismiss();
-  //         this.events.publish('user', successData);
-  //         window.localStorage.setItem('user', JSON.stringify(successData));
-  //         this.navCtrl.setRoot(TabsPage);
-  //       }
-  //     }).catch((err) => {
-  //       loading.dismiss();
-  //       let errMsg = JSON.parse(err._body)
-  //       alert("Login fail! : " + errMsg.message);
-  //     });
-  //   } else {
-  //     alert("Please fill email and password");
-  //   }
-
-
-
-  // }
-
   EmailLogin(getusername, getpassword) {
     if (getusername !== "" && getpassword !== "") {
 
@@ -92,10 +48,10 @@ export class LoginEmailPage {
       // alert(credential);
       this.authPVD.signin(credential).subscribe(res => {
         if (res.roles[0] !== "user") {
-          loading.dismiss();
+          // loading.dismiss();
           alert("This user is not authorize");
         } else {
-          loading.dismiss();
+          // loading.dismiss();
           window.localStorage.setItem('user', JSON.stringify(res));
           this.navCtrl.setRoot(TabsPage);
         }
