@@ -21,7 +21,7 @@ import { App, IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ProfilePage {
   public backgroundImage = 'assets/image/profile-bg.jpg';
   public user;
-  url
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -29,7 +29,7 @@ export class ProfilePage {
     private app: App
   ) {
     this.user = JSON.parse(window.localStorage.getItem('user'));
-     this.url =  this.user.profileImageURL
+    // console.log(this.user.cupcoin);
 
     this.auth.private().subscribe(data => {
       console.log(data);

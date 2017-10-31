@@ -18,8 +18,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ActivityPage {
 
   public backgroundImage = './assets/image/activity_2.jpg';
+  public user;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = JSON.parse(window.localStorage.getItem('user'));
   }
 
   ionViewDidLoad() {
