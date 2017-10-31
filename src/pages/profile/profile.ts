@@ -1,3 +1,4 @@
+import { UsersModel } from '../../models/users.model';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
 import { FavoritePage } from './../favorite/favorite';
 import { LoginPage } from '../login/login';
@@ -19,13 +20,18 @@ import { App, IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
   public backgroundImage = 'assets/image/profile-bg.jpg';
+  public user;
+  url
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public auth:AuthenticationProvider,
+    public auth: AuthenticationProvider,
     private app: App
   ) {
-    this.auth.private().subscribe(data =>{
+    this.user = JSON.parse(window.localStorage.getItem('user'));
+     this.url =  this.user.profileImageURL
+
+    this.auth.private().subscribe(data => {
       console.log(data);
     })
   }
@@ -43,4 +49,6 @@ export class ProfilePage {
     this.auth.logout();
     this.app.getRootNav().setRoot(LoginPage);
   }
+
+
 }

@@ -7,24 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Profile</ion-title>
+    <ion-title>บัญชีผู้ใช้</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content no-bounce padding [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
-
   <ion-list border>
     <ion-item transparent>
       <ion-row>
         <ion-col col-12 text-center>
-          <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460" img-size alt="">
+          <img src="{{user.profileImageURL}}" img-size alt="">
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col col-12 text-center>
-          <div font-name-size>Theerasak Tubrit</div>
+          <div font-name-size>{{user.displayName}}</div>
         </ion-col>
       </ion-row>
     </ion-item>
