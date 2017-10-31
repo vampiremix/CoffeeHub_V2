@@ -120,10 +120,13 @@ export class HomePage {
   doRefresh($event) {
     this.authPVD.updateUserdata().then(
       (data) => {
+        console.log(JSON.stringify(data));
         this.user = data;
+        $event.complete();
         window.localStorage.setItem('user', JSON.stringify(data));
       }
     ).catch((Err) => {
+      $event.complete();
       alert("เกิดข้อผิดพลาดระหว่างการอัพเดทข้อมูล");
     });
   }
