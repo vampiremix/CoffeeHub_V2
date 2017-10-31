@@ -39,7 +39,7 @@
         <ion-item *ngFor="let item of product.dinks">
           <ion-grid>
             <ion-row>
-              <ion-col col-3>
+              <ion-col col-3 (click)="productDetail()">
                 <ion-thumbnail item-start>
                   <img src="{{item.image}}">
                 </ion-thumbnail>
@@ -85,9 +85,9 @@
         <ion-item *ngFor="let item of product.foods">
           <ion-grid>
             <ion-row>
-              <ion-col col-3>
-                <ion-thumbnail item-start (click)="productDetail()">
-                  <img src="{{item.image}}">
+              <ion-col col-3 >
+                <ion-thumbnail item-start >
+                  <img src="{{item.image}}" >
                 </ion-thumbnail>
               </ion-col>
               <ion-col col-7>

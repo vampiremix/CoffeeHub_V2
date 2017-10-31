@@ -14,5 +14,29 @@
 
 
 <ion-content padding>
+  <div>
+    <ion-slides pager>
+      <ion-slide *ngFor="let item of dataDescriptions.image">
+        <img [src]="item">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="title-a">
+    <h2>{{dataDescriptions.name}}</h2>
+  </div>
+
+  <ion-grid class="grid-price">
+    <ion-row>
+      <ion-col col-6 class="favorite">
+        <ion-icon ios="ios-heart-outline" md="md-heart-outline" >
+          <ion-label class="favorite-f">Favorite</ion-label>
+        </ion-icon>
+      </ion-col>
+      <ion-col col-6>
+        <p class="price-pomotions">฿ {{dataDescriptions.price}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -1,3 +1,4 @@
+import { ProductDetailPage } from '../pages/product-detail/product-detail';
 import { HeaderToolbarComponent } from '../components/header-toolbar/header-toolbar';
 import { FavoritePage } from './../pages/favorite/favorite';
 import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
@@ -77,7 +78,8 @@ import { RegisterProvider } from '../providers/register/register';
     SearchbarComponent,
     RegisterPage,
     FavoritePage,
-    HeaderToolbarComponent
+    HeaderToolbarComponent,
+    ProductDetailPage
   ],
   imports: [
     BrowserModule,
@@ -119,7 +121,8 @@ import { RegisterProvider } from '../providers/register/register';
     SearchbarComponent,
     RegisterPage,
     FavoritePage,
-    HeaderToolbarComponent
+    HeaderToolbarComponent,
+    ProductDetailPage
   ],
   providers: [
     StatusBar,
