@@ -27,8 +27,15 @@
 
 
 
-<ion-content>
-  <ion-card class="card-background-page" *ngFor="let item of list">
+<ion-content padding="">
+  <!-- <ion-card class="card-background-page" *ngFor="let item of list">
     <img [src]="item" img-promo/>
-  </ion-card>
+  </ion-card> -->
+
+  <div class="card-container">
+      <div class="card" >
+        <div class="side" *ngFor="let item of list"><img [src]="item" img-promo/></div>
+        <div class="side back">Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World</div>
+      </div>
+    </div>
 </ion-content>
