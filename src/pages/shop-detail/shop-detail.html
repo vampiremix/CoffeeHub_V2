@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>shopDetail</ion-title>
+  <ion-navbar >
+    <ion-title>{{shopData.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,11 +18,11 @@
   <ion-slides pager="true" autoplay="1000">
     <!-- <ion-slide *ngFor="let item of shopImage"> -->
     <ion-slide no-padding>
-      <img src="./assets/image/promotion_pic_new.png" alt="">
+      <img src="{{shopData.image}}" alt="">
     </ion-slide>
-    <ion-slide no-padding>
+    <!-- <ion-slide no-padding>
       <img src="./assets/image/promotion_pic_new.png" alt="">
-    </ion-slide>
+    </ion-slide> -->
   </ion-slides>
 
   <ion-list>

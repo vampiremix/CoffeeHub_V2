@@ -35,9 +35,9 @@ export class HomePage {
     public authPVD: AuthenticationProvider
 
   ) {
-    
+
     this.user = JSON.parse(window.localStorage.getItem('user'));
-    
+
     this.dataListX = [{
       link: ShopLocationPage,
       image: './assets/image/SL4.jpg'
@@ -117,11 +117,12 @@ export class HomePage {
   gotoPage(Page) {
     this.navCtrl.push(Page);
   }
-  gotoLogin(){
+  gotoLogin() {
     this.navCtrl.parent.parent.setRoot(LoginPage);
   }
-  gotoShopList() {
-    this.navCtrl.push(ShopDetailPage);
+  gotoShopDetail(item) {
+    // alert("shop"+JSON.stringify(item))
+    this.navCtrl.push(ShopDetailPage, { 'itemshop': item });
   }
   doRefresh($event) {
     this.authPVD.updateUserdata().then(
