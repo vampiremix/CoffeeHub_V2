@@ -38,8 +38,7 @@ page-home {
     [button-size] {
         height: 53px;
         width: 53px;
-    }
-    // [nav-height] {
+    } // [nav-height] {
     //     height: 5.5em;
     // }
     [img-size] {
@@ -84,10 +83,10 @@ page-home {
     [point-style] {
         font-size: 8em;
         margin-top: 4vh;
-        width:100%;
+        width: 100%;
         position: absolute;
-        color:white;
-      text-align: center;
+        color: white;
+        text-align: center;
+        margin-left: 0px;
     }
-
 }

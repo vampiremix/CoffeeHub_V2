@@ -29,15 +29,12 @@
 
   <!-- --------------- POINT BANNER WITH USER --------------- -->
   <ion-card class="card-background-page" *ngIf="user" (click)="popupActivities()">
-    <ion-row justify-content-center>
-      <ion-col col-6 justify-content-center>
-        <div point-style>{{user.cupcoin}}</div>
+    <ion-row justify-content-center no-padding >
+      <ion-col col-12 text-center point-style>
+        {{user.cupcoin}}
       </ion-col>
     </ion-row>
-
     <img src="./assets/image/top-banner.png" />
-    <!-- <img src="./assets/image/login.jpg" /> -->
-
   </ion-card>
   <!-- --------------- POINT BANNER WITH USER --------------- -->
 
@@ -46,7 +43,6 @@
 
   <ion-card class="card-background-page" (click)="gotoLogin()" *ngIf="!user">
     <img src="./assets/image/login.jpg" />
-
   </ion-card>
 
   <!-- --------------- POINT BANNER WITHOUT USER--------------- -->
@@ -58,7 +54,6 @@
   <!-- --------------- PROMOTION BLOCK --------------- -->
   <div>
     <h4 no-margin class="categories-title">โปรโมชั่นแนะนำ
-
     </h4>
     <div>
       <ion-scroll scrollX="true" class="slide-x1">
