@@ -1,3 +1,4 @@
+import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { ProductDetailPage } from '../pages/product-detail/product-detail';
 import { HeaderToolbarComponent } from '../components/header-toolbar/header-toolbar';
 import { FavoritePage } from './../pages/favorite/favorite';
@@ -79,7 +80,8 @@ import { RegisterProvider } from '../providers/register/register';
     RegisterPage,
     FavoritePage,
     HeaderToolbarComponent,
-    ProductDetailPage
+    ProductDetailPage,
+    WalkthroughPage
   ],
   imports: [
     BrowserModule,
@@ -122,7 +124,8 @@ import { RegisterProvider } from '../providers/register/register';
     RegisterPage,
     FavoritePage,
     HeaderToolbarComponent,
-    ProductDetailPage
+    ProductDetailPage,
+    WalkthroughPage
   ],
   providers: [
     StatusBar,
