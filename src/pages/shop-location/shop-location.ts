@@ -80,9 +80,9 @@ export class ShopLocationPage {
   // }
 
   loadMap() {
-
+    alert("sssssssssss");
     this.geolocation.getCurrentPosition().then((resp) => {
-
+      alert("aaaaaaaaa");
       let location = new LatLng(resp.coords.latitude, resp.coords.longitude);
       this.map = new GoogleMap('map', {
         'controls': {
