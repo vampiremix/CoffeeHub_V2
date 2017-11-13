@@ -1,9 +1,9 @@
+import { Geolocation } from '@ionic-native/geolocation';
 import { ShopsModel2 } from '../../models/shops.model';
 import { LocationProvider } from '../../providers/location/location';
 
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
-import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps, GoogleMap, Geocoder, GoogleMapsEvent, GoogleMapOptions, CameraPosition, MarkerOptions, Marker, LatLng } from '@ionic-native/google-maps';
 
 declare var google;
@@ -14,7 +14,7 @@ declare var google;
   templateUrl: 'shop-location.html',
 })
 export class ShopLocationPage {
-  
+
   dataShop: any = [];
   private latLng: any = {};
   map: GoogleMap;
@@ -41,6 +41,10 @@ export class ShopLocationPage {
     public platform: Platform,
     public geolocation: Geolocation,
   ) {
+    console.log('ionViewDidLoad MapPage');
+    this.platform.ready().then(() => {
+      this.loadMap();
+    });
 
   }
 

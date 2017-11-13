@@ -36,7 +36,7 @@ import { PaymentPincodePage } from '../pages/payment-pincode/payment-pincode';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 // import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Geolocation } from '@ionic-native/geolocation';
+
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { LoginPage } from '../pages/login/login';
 import { HttpModule } from '@angular/http';
@@ -45,7 +45,7 @@ import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
 import { Ionic2RatingModule } from 'ionic2-rating';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { RouteUrlProvider } from '../providers/route-url/route-url';
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { RegisterProvider } from '../providers/register/register';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -133,8 +133,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     StatusBar,
     SplashScreen,
     // BarcodeScanner,
-    Geolocation,
     GoogleMaps,
+    Geolocation,
     LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ShopDataApiProvider,
