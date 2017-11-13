@@ -46,10 +46,8 @@
     },
     "is_top_level": true,
     "variables": {
-      "API_KEY_FOR_ANDROID": "AIzaSyDZhabBsvGSwVCHUFtGXwDIfUCyHTPMe8Q",
-      "API_KEY_FOR_IOS": "AIzaSyDpuGYHjHFCWQmTuR1t5sKO3To643qWios",
-      "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
-      "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
+      "API_KEY_FOR_ANDROID": "AIzaSyDcX74oRvJuyUT-yqNbC4NXwbXQwmf2K3Y",
+      "API_KEY_FOR_IOS": "AIzaSyB4vuA6aPPvO_o5_Ivx4wSWHLPZl-5ZT44"
     }
   },
   "com.googlemaps.ios": {
