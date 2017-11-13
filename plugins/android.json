@@ -7,6 +7,21 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "292581127896829",
+      "APP_NAME": "Coffee Hub",
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyDcX74oRvJuyUT-yqNbC4NXwbXQwmf2K3Y",
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "com.cnet.coffeehub"
     },
@@ -21,22 +36,11 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.cnet.coffeehub"
-    },
-    "cordova-plugin-googlemaps": {
-      "API_KEY_FOR_ANDROID": "AIzaSyDZhabBsvGSwVCHUFtGXwDIfUCyHTPMe8Q",
-      "PACKAGE_NAME": "com.cnet.coffeehub"
-    },
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.cnet.coffeehub"
-    },
-    "cordova-plugin-facebook4": {
-      "APP_ID": "292581127896829",
-      "APP_NAME": "Coffee Hub",
-      "PACKAGE_NAME": "com.cnet.coffeehub"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.cnet.coffeehub"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "com.googlemaps.ios": {
+      "PACKAGE_NAME": "com.cnet.coffeehub"
+    }
+  }
 }

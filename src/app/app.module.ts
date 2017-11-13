@@ -35,7 +35,7 @@ import { ActivityPage } from '../pages/activity/activity';
 import { PaymentPincodePage } from '../pages/payment-pincode/payment-pincode';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-// import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { LoginPage } from '../pages/login/login';
@@ -132,7 +132,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
   providers: [
     StatusBar,
     SplashScreen,
-    // BarcodeScanner,
+    BarcodeScanner,
     GoogleMaps,
     Geolocation,
     LocationProvider,

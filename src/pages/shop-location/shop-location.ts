@@ -41,10 +41,7 @@ export class ShopLocationPage {
     public platform: Platform,
     public geolocation: Geolocation,
   ) {
-    console.log('ionViewDidLoad MapPage');
-    this.platform.ready().then(() => {
-      this.loadMap();
-    });
+  
 
   }
 
@@ -104,7 +101,7 @@ export class ShopLocationPage {
           'bearing': 30
         },
       });
-
+      alert("jjjjjjjjjjj");
       this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
         alert('Map is ready!');
         let latlng = {
@@ -126,7 +123,7 @@ export class ShopLocationPage {
                 .subscribe((data) => {
                   latlng = { lat: data[0].lat, lng: data[0].lng };
                   alert(JSON.stringify(latlng));
-
+                  alert("aaaaaaaaa");
                   // this.nativeGeocoder.reverseGeocode(data[0].lat, data[0].lng)
                   // .then((result: NativeGeocoderReverseResult) => alert(JSON.stringify(result)))
                   // .catch((error: any) => console.log(error));
