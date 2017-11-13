@@ -88,47 +88,68 @@ export class ShopLocationPage {
       types: ['restaurant'],
       keyword: 'coffee'
     };
-    var infowindow = new google.maps.InfoWindow();
     
 
-    let service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, (results, status) => {
-      if (status == 'OK') {
-        results.forEach(element => {
-          for (let i = 0; i < this.mapsLatlong.length; i++) {
-           
-            console.log("xxxxxxxxx");
-            console.log(this.mapsLatlong[i]);
-            let marker = new google.maps.Marker({
-              title: this.mapsLatlong[i].name ,
-              draggable: false,
-              // position: element.geometry.location,
-              position: {
-                lat: parseFloat(this.mapsLatlong[i].location.lat),
-                lng: parseFloat(this.mapsLatlong[i].location.lng)
-              },
-              map: map,
-              icon: "./assets/image/coffee-n-tea.png"
-              // icon:  {
-              //   url: '../../assets/image/map-pin-746123_1920.png',
-              //   anchor: new google.maps.Point(10, 10),
-              //   scaledSize: new google.maps.Size(30, 50)
-              // }
-            });
+    this.mapsLatlong.forEach(element => {
+      let infowindow = new google.maps.InfoWindow();
+      console.log(element);
+      let marker = new google.maps.Marker({
+        draggable: false,
+        position: {
+          lat: parseFloat(element.location.lat),
+          lng: parseFloat(element.location.lng)
+        },
+        map: map,
+        icon: "./assets/icon/pin_2.png"
+      });
+      infowindow.setContent(element.name + element.address.subdistrict + element.address.district + element.address.province);
 
-            google.maps.event.addListener(marker, 'click', () => {
-              // alert(JSON.stringify(element));
-              // this.dataShop = element;
-              let infowindowContent = marker.title;
-              infowindow.setContent(infowindowContent);
-              console.log(marker.title);
-              let s = marker.title;
-              infowindow.open(map, marker);
-            });
-          }
-        });
-      }
+      google.maps.event.addListener(marker, 'click', () => {
+        infowindow.open(map, marker);
+      });
     });
+
+
+    // let service = new google.maps.places.PlacesService(map);
+    // service.nearbySearch(request, (results, status) => {
+    //   if (status == 'OK') {
+    //     results.forEach(element => {
+    //       for (let i = 0; i < this.mapsLatlong.length; i++) {
+
+    //         console.log("xxxxxxxxx");
+    //         console.log(this.mapsLatlong[i]);
+    //         let marker = new google.maps.Marker({
+    //           title: this.mapsLatlong[i].name ,
+    //           title1: this.mapsLatlong[i].email ,
+    //           draggable: false,
+    //           // position: element.geometry.location,
+    //           position: {
+    //             lat: parseFloat(this.mapsLatlong[i].location.lat),
+    //             lng: parseFloat(this.mapsLatlong[i].location.lng)
+    //           },
+    //           map: map,
+    //           icon: "./assets/icon/pin_2.png"
+    //           // icon:  {
+    //           //   url: '../../assets/image/map-pin-746123_1920.png',
+    //           //   anchor: new google.maps.Point(10, 10),
+    //           //   scaledSize: new google.maps.Size(30, 50)
+    //           // }
+    //         });
+
+    //         google.maps.event.addListener(marker, 'click', () => {
+    //           // alert(JSON.stringify(element));
+    //           // this.dataShop = element;
+    //           let infowindowContent = {t1:marker.title,t2:marker.title1};
+    //           infowindow.setContent(infowindowContent.t1);
+
+    //           console.log(marker);
+
+    //           infowindow.open(map, marker);
+    //         });
+    //       }
+    //     });
+    //   }
+    // });
 
   }
 
