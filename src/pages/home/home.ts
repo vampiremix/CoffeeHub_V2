@@ -165,6 +165,7 @@ export class HomePage {
     service.nearbySearch(request, (results, status) => {
       if (status == 'OK') {
         results.forEach(element => {
+          
           console.log(element);
           // console.log(element.geometry.location.lat() +"         "+ element.geometry.location.lng() );
           this.dataShop.push({

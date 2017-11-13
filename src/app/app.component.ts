@@ -1,4 +1,4 @@
-
+import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 
@@ -14,7 +14,7 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = TabsPage;
+  rootPage: any = WalkthroughPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public auth: AuthenticationProvider) {
     { let user = JSON.parse(window.localStorage.getItem('user'));
      
