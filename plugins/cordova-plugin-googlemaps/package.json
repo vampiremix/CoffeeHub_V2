@@ -10,23 +10,23 @@
         "spec": ">=2.0.11 <3.0.0",
         "type": "range"
       },
-      "/Users/notcha/Desktop/work/CoffeeHub_V2"
+      "D:\\CoffeeHub_V2"
     ]
   ],
   "_from": "cordova-plugin-googlemaps@>=2.0.11 <3.0.0",
-  "_id": "cordova-plugin-googlemaps@2.0.11",
+  "_id": "cordova-plugin-googlemaps@2.1.1",
   "_inCache": true,
   "_location": "/cordova-plugin-googlemaps",
-  "_nodeVersion": "5.4.1",
+  "_nodeVersion": "6.9.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/cordova-plugin-googlemaps-2.0.11.tgz_1506023352469_0.24020609422586858"
+    "tmp": "tmp/cordova-plugin-googlemaps-2.1.1.tgz_1509609200841_0.6097874366678298"
   },
   "_npmUser": {
     "name": "wf9a5m75",
     "email": "wf9a5m75@gmail.com"
   },
-  "_npmVersion": "3.3.12",
+  "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
     "raw": "cordova-plugin-googlemaps@^2.0.11",
@@ -41,11 +41,11 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-2.0.11.tgz",
-  "_shasum": "87f663e7c1e84e76edb9499513f84e836564790e",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-2.1.1.tgz",
+  "_shasum": "5a4d26a5df3bbe8d34291851320ec457b5751589",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-googlemaps@^2.0.11",
-  "_where": "/Users/notcha/Desktop/work/CoffeeHub_V2",
+  "_where": "D:\\CoffeeHub_V2",
   "author": {
     "name": "Masashi Katsumata, Hirbod Mirjavadi"
   },
@@ -64,8 +64,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "87f663e7c1e84e76edb9499513f84e836564790e",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-2.0.11.tgz"
+    "shasum": "5a4d26a5df3bbe8d34291851320ec457b5751589",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-googlemaps/-/cordova-plugin-googlemaps-2.1.1.tgz"
   },
   "engines": [
     {
@@ -73,7 +73,7 @@
       "version": ">=6.2.0"
     }
   ],
-  "gitHead": "33eeac8c67ce45b1ba9609f278b7357d0b474fd0",
+  "gitHead": "f8db5865e77a4688cd14456bfcceba73699ab599",
   "homepage": "https://github.com/mapsplugin/cordova-plugin-googlemaps",
   "keywords": [
     "google",
@@ -103,5 +103,5 @@
     "url": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git"
   },
   "scripts": {},
-  "version": "2.0.11"
+  "version": "2.1.1"
 }

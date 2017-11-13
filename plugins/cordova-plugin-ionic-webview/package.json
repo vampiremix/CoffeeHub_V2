@@ -10,7 +10,7 @@
         "spec": ">=1.1.16 <2.0.0",
         "type": "range"
       },
-      "/Users/notcha/Desktop/work/CoffeeHub_V2"
+      "D:\\CoffeeHub_V2"
     ]
   ],
   "_from": "cordova-plugin-ionic-webview@>=1.1.16 <2.0.0",
@@ -45,7 +45,7 @@
   "_shasum": "92d5f2e4a5a829f91b487b1761848765a31c9f1e",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-ionic-webview@^1.1.16",
-  "_where": "/Users/notcha/Desktop/work/CoffeeHub_V2",
+  "_where": "D:\\CoffeeHub_V2",
   "author": {
     "name": "Ionic Team"
   },

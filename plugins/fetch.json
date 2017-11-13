@@ -47,34 +47,10 @@
     "is_top_level": true,
     "variables": {
       "API_KEY_FOR_ANDROID": "AIzaSyDcX74oRvJuyUT-yqNbC4NXwbXQwmf2K3Y",
-      "API_KEY_FOR_IOS": "AIzaSyB4vuA6aPPvO_o5_Ivx4wSWHLPZl-5ZT44"
+      "API_KEY_FOR_IOS": "AIzaSyB4vuA6aPPvO_o5_Ivx4wSWHLPZl-5ZT44",
+      "LOCATION_WHEN_IN_USE_DESCRIPTION": "Show your location on the map",
+      "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Trace your location on the map"
     }
-  },
-  "com.googlemaps.ios": {
-    "source": {
-      "type": "registry",
-      "id": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-plugin-geolocation": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-geolocation@^2.4.3"
-    },
-    "is_top_level": true,
-    "variables": {
-      "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
-    }
-  },
-  "cordova-plugin-compat": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-compat@^1.0.0"
-    },
-    "is_top_level": false,
-    "variables": {}
   },
   "cordova-plugin-facebook4": {
     "source": {
@@ -93,6 +69,24 @@
       "id": "cordova-plugin-device@^1.1.6"
     },
     "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@^2.4.3"
+    },
+    "is_top_level": true,
+    "variables": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+    }
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
     "variables": {}
   }
 }

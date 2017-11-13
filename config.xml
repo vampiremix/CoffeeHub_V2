@@ -89,12 +89,13 @@
         <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Show your location on the map" />
         <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Trace your location on the map" />
     </plugin>
-    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
-    </plugin>
     <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
         <variable name="APP_ID" value="292581127896829" />
         <variable name="APP_NAME" value="Coffee Hub" />
     </plugin>
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
+    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
+    </plugin>
+    <engine name="android" spec="~6.3.0" />
 </widget>
