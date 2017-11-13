@@ -14,27 +14,34 @@ declare var google;
   templateUrl: 'shop-location.html',
 })
 export class ShopLocationPage {
+  
   dataShop: any = [];
   private latLng: any = {};
   map: GoogleMap;
   public dataClick;
-  
+
   // @ViewChild('map') mapElement: ElementRef;
   // private latLng: any = {};
   // dataShop;
   Edit = "map";
 
-  mapsLatlong: Array<ShopsModel2> = new Array<ShopsModel2>();
+  // mapsLatlong: Array<ShopsModel2> = new Array<ShopsModel2>();
+  mapsLatlong: Array<any> = [
 
+    { 'lat': 13.934121, 'long': 100.717228 },
+    { 'lat': 13.934413, 'long': 100.717657 },
+    { 'lat': 13.933434, 'long': 100.719009 }
+
+  ];
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public locationProvider:LocationProvider,
+    public locationProvider: LocationProvider,
     public platform: Platform,
     public geolocation: Geolocation,
   ) {
-    
+
   }
 
   ionViewDidLoad() {
@@ -43,94 +50,94 @@ export class ShopLocationPage {
     this.platform.ready().then(() => {
       this.loadMap();
     });
-    this.gitDataShopLocations();
+    // this.gitDataShopLocations();
 
-    
+
   }
 
   clicktogglr() {
     if (this.Edit == "map") {
       this.Edit = "list"
-      
+
     } else if (this.Edit == "list") {
       this.Edit = "map"
-    
+
     }
   }
 
-  gitDataShopLocations(){
-    this.locationProvider.shopLocation().then((res)=>{
-      console.log(res);
-      this.mapsLatlong = res;
-      console.log(this.mapsLatlong[0]._id);
-    }).catch((err)=>{
-      console.log(err);
-    })
-  }
-  
+  // gitDataShopLocations() {
+  //   this.locationProvider.shopLocation().then((res) => {
+  //     console.log(res);
+  //     this.mapsLatlong = res;
+  //     console.log(this.mapsLatlong[0]._id);
+  //   }).catch((err) => {
+  //     console.log(err);
+  //   })
+  // }
+
   loadMap() {
-    
-        this.geolocation.getCurrentPosition().then((resp) => {
-    
-          let location = new LatLng(resp.coords.latitude, resp.coords.longitude);
-          this.map = new GoogleMap('map', {
-            'controls': {
-              'compass': true,
-              'myLocationButton': true,
-              'indoorPicker': true,
-              'zoom': true
-            },
-            'gestures': {
-              'scroll': true,
-              'tilt': true,
-              'rotate': true,
-              'zoom': true
-            },
-            'camera': {
-              'target': location,
-              'tilt': 90,
-              'zoom': 14,
-              'bearing': 30
-            },
-          });
-    
-          this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
-            alert('Map is ready!');
-            let latlng = {
-              lat: 0,
-              lng: 0
-            };
-            for (let i = 0; i < this.mapsLatlong.length; i++) {
-              let addmarker = this.map.addMarker({
-                title: 'select shop',
-                icon: './assets/icon/pin_2.png',
-                animation: 'BOUNCE',
-                position: {
-                  lat: this.mapsLatlong[i].location[i].lat,
-                  lng: this.mapsLatlong[i].location[i].lng
-                }
-              })
-                .then(marker => {
-                  marker.on(GoogleMapsEvent.MARKER_CLICK)
-                    .subscribe((data) => {
-                      latlng = { lat: data[0].lat, lng: data[0].lng };
-                      alert(JSON.stringify(latlng));
 
-                      // this.nativeGeocoder.reverseGeocode(data[0].lat, data[0].lng)
-                      // .then((result: NativeGeocoderReverseResult) => alert(JSON.stringify(result)))
-                      // .catch((error: any) => console.log(error));
+    this.geolocation.getCurrentPosition().then((resp) => {
 
+      let location = new LatLng(resp.coords.latitude, resp.coords.longitude);
+      this.map = new GoogleMap('map', {
+        'controls': {
+          'compass': true,
+          'myLocationButton': true,
+          'indoorPicker': true,
+          'zoom': true
+        },
+        'gestures': {
+          'scroll': true,
+          'tilt': true,
+          'rotate': true,
+          'zoom': true
+        },
+        'camera': {
+          'target': location,
+          'tilt': 90,
+          'zoom': 14,
+          'bearing': 30
+        },
+      });
 
-            
-                    });
-                });
+      this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
+        alert('Map is ready!');
+        let latlng = {
+          lat: 0,
+          lng: 0
+        };
+        for (let i = 0; i < this.mapsLatlong.length; i++) {
+          let addmarker = this.map.addMarker({
+            title: 'select shop',
+            icon: './assets/icon/pin_2.png',
+            animation: 'BOUNCE',
+            position: {
+              lat: this.mapsLatlong[i].location[i].lat,
+              lng: this.mapsLatlong[i].location[i].lng
             }
-           
-          });
-        }).catch((error) => {
-          console.log('Error getting location', error);
-        });
-      }
+          })
+            .then(marker => {
+              marker.on(GoogleMapsEvent.MARKER_CLICK)
+                .subscribe((data) => {
+                  latlng = { lat: data[0].lat, lng: data[0].lng };
+                  alert(JSON.stringify(latlng));
+
+                  // this.nativeGeocoder.reverseGeocode(data[0].lat, data[0].lng)
+                  // .then((result: NativeGeocoderReverseResult) => alert(JSON.stringify(result)))
+                  // .catch((error: any) => console.log(error));
+
+
+
+                });
+            });
+        }
+
+      });
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
+  }
 
 }
   // initMap() {
@@ -151,7 +158,7 @@ export class ShopLocationPage {
   //     keyword: 'coffee'
   //   };
 
-    
+
   //   let service = new google.maps.places.PlacesService(map);
   //   service.nearbySearch(request, (results, status) => {
   //     if (status == 'OK') {
@@ -180,7 +187,7 @@ export class ShopLocationPage {
   //       });
   //     }
   //   });
-  
+
   // }
 
 

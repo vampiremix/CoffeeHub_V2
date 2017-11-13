@@ -48,6 +48,8 @@ import { RouteUrlProvider } from '../providers/route-url/route-url';
 
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { RegisterProvider } from '../providers/register/register';
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 
 
 @NgModule({
@@ -132,6 +134,7 @@ import { RegisterProvider } from '../providers/register/register';
     SplashScreen,
     // BarcodeScanner,
     Geolocation,
+    GoogleMaps,
     LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ShopDataApiProvider,
