@@ -1,11 +1,9 @@
 page-profile {
-   
     ion-content {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border-color: transparent;
-     
     }
     [img-size] {
         width: 10em;
@@ -16,12 +14,14 @@ page-profile {
     [font-name-size] {
         font-size: 1.5em;
     }
- 
-    [transparent]{
+    [transparent] {
         background-color: rgba(255, 255, 255, 0.39) !important;
-        border-radius: 5%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
     }
-    [transparent2]{
+    [transparent2] {
         background-color: rgba(255, 255, 255, 0.39) !important;
     }
 }

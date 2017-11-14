@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RouteUrlProvider {
   ////////////////////////////////////////////////
-  apiUrl: string = 'https://coffeehubserver-test.herokuapp.com/';
+  apiUrl: string = 'https://coffeehubserver.herokuapp.com/';
   headers = new Headers({
     'Content-Type': 'application/json'
   });

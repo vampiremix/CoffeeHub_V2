@@ -1,3 +1,5 @@
+import { AuthenticationProvider } from '../../providers/authentication/authentication';
+import { FavoritePage } from './../favorite/favorite';
 import { LoginPage } from '../login/login';
 import { Component } from '@angular/core';
 import { App, IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -17,15 +19,35 @@ import { App, IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
   public backgroundImage = 'assets/image/profile-bg.jpg';
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public app: App) {
+  public user;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public auth: AuthenticationProvider,
+    private app: App
+  ) {
+    this.user = JSON.parse(window.localStorage.getItem('user'));
+    // console.log(this.user.cupcoin);
+
+    this.auth.private().subscribe(data => {
+      console.log(data);
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
-  Logout() {
-    this.app.getRootNav().push(LoginPage);
-   
+  favorite() {
+    this.navCtrl.push(FavoritePage);
+
   }
+  Logout() {
+    window.localStorage.removeItem('user');
+    // this.navCtrl.parent.parent.setRoot(LoginPage);
+    this.auth.logout();
+    this.app.getRootNav().setRoot(LoginPage);
+  }
+
+
 }

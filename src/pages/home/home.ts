@@ -1,3 +1,4 @@
+import { LoginPage } from '../login/login';
 import { ShopListPage } from '../shop-list/shop-list';
 import { NewProductPage } from '../new-product/new-product';
 import { PremiumProductPage } from '../premium-product/premium-product';
@@ -22,7 +23,7 @@ export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop: any = [];
-
+  public user;
   private dataListX: Array<any> = [];
   private promotionData: Array<any> = [];
   private promotionData2: Array<any> = [];
@@ -31,8 +32,12 @@ export class HomePage {
   public localationData;
   constructor(public navCtrl: NavController, public modalCtrl: ModalController,
     public locationPVD: LocationProvider,
-  
+    public authPVD: AuthenticationProvider
+
   ) {
+
+    this.user = JSON.parse(window.localStorage.getItem('user'));
+
     this.dataListX = [{
       link: ShopLocationPage,
       image: './assets/image/SL4.jpg'
@@ -87,8 +92,8 @@ export class HomePage {
     }];
 
 
-    this.localationData = this.locationPVD.getCurrentLocation();
-    alert("Location : " + this.localationData);
+    // this.localationData = this.locationPVD.getCurrentLocation();
+    // alert("Location : " + this.localationData);
   }
 
   popupActivities() {
@@ -112,9 +117,27 @@ export class HomePage {
   gotoPage(Page) {
     this.navCtrl.push(Page);
   }
-  gotoShopList(Shopdata) {
-    this.navCtrl.push(ShopDetailPage,{});
+  gotoLogin() {
+    this.navCtrl.parent.parent.setRoot(LoginPage);
   }
+  gotoShopDetail(item) {
+    // alert("shop"+JSON.stringify(item))
+    this.navCtrl.push(ShopDetailPage, { 'itemshop': item });
+  }
+  doRefresh($event) {
+    this.authPVD.updateUserdata().then(
+      (data) => {
+        console.log(JSON.stringify(data));
+        this.user = data;
+        $event.complete();
+        window.localStorage.setItem('user', JSON.stringify(data));
+      }
+    ).catch((Err) => {
+      $event.complete();
+      alert("เกิดข้อผิดพลาดระหว่างการอัพเดทข้อมูล");
+    });
+  }
+
 
   ionViewDidLoad() {
     this.initMap();
@@ -142,6 +165,7 @@ export class HomePage {
     service.nearbySearch(request, (results, status) => {
       if (status == 'OK') {
         results.forEach(element => {
+          
           console.log(element);
           // console.log(element.geometry.location.lat() +"         "+ element.geometry.location.lng() );
           this.dataShop.push({
@@ -156,5 +180,6 @@ export class HomePage {
   openPageShopList() {
     this.navCtrl.push(ShopListPage);
   }
-  
+
+
 }

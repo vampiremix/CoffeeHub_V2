@@ -5,30 +5,37 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-header>
-    <ion-toolbar tool-height>
-      <ion-buttons start>
-        <button ion-button (click)="gotoProfile()">
-          <ion-avatar item-start>
-            <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460">
-          </ion-avatar>
-        </button>
-      </ion-buttons>
-      <ion-title text-center>
-        Promotion
-      </ion-title>
-      <ion-buttons end>
-        <button ion-button (click)="location()">
-          <img src="./assets/image/shop-icon-01.png" width="40" height="40">
-        </button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<header-toolbar [title]="page"></header-toolbar>
+  <!-- <ion-toolbar tool-height>
+    <ion-buttons start>
+      <button ion-button (click)="gotoProfile()">
+        <ion-avatar item-start>
+          <img src="./assets/icon/Profile_img2-01.png">
+        </ion-avatar>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>
+      Promotion
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="location()">
+        <img src="./assets/image/shop-icon-01.png" width="40" height="40">
+      </button>
+    </ion-buttons>
+  </ion-toolbar> -->
 </ion-header>
 
 
-<ion-content>
-  <ion-card class="card-background-page" *ngFor="let item of list">
-    <img [src]="item" />
-  </ion-card>
+
+<ion-content padding="">
+  <!-- <ion-card class="card-background-page" *ngFor="let item of list">
+    <img [src]="item" img-promo/>
+  </ion-card> -->
+
+  <div class="card-container">
+      <div class="card" >
+        <div class="side" *ngFor="let item of list"><img [src]="item" img-promo/></div>
+        <div class="side back">Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World Jimmy Eat World</div>
+      </div>
+    </div>
 </ion-content>

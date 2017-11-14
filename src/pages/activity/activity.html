@@ -8,7 +8,7 @@
 
 
 <ion-content no-bounce [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
-  <ion-fab right>
+  <ion-fab margin-top right>
     <button ion-fab mini (click)="closePage()">
       <ion-icon name="md-close-circle"></ion-icon>
     </button>
@@ -18,7 +18,7 @@
       <ion-col col-8>
         <img src="./assets/image/activity_4.png" alt="">
         <div top-padding2>
-          <h2 class="ponit">9</h2>
+          <h2 class="ponit">{{user.cupcoin}}</h2>
           <h2 class="cup-coin">CUP COIN</h2>
         </div>
       </ion-col>
@@ -55,7 +55,7 @@
     </ion-row>
     <ion-row justify-content-center no-padding>
       <ion-col col-10 no-padding>
-        <button ion-button outline block large>เต็มเงิน</button>
+        <button ion-button outline block large>เติมเงิน</button>
       </ion-col>
     </ion-row>
   </ion-grid>

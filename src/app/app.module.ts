@@ -1,6 +1,13 @@
+import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+import { ProductDetailPage } from '../pages/product-detail/product-detail';
+import { HeaderToolbarComponent } from '../components/header-toolbar/header-toolbar';
+import { FavoritePage } from './../pages/favorite/favorite';
+import { RateCupcoinPage } from './../pages/rate-cupcoin/rate-cupcoin';
+import { RegisterPage } from '../pages/register/register';
+import { SearchbarComponent } from '../components/searchbar/searchbar';
+import { ListItemComponent } from '../components/list-item/list-item';
 import { NewProductPage } from '../pages/new-product/new-product';
 import { ShopListPage } from '../pages/shop-list/shop-list';
-import { SegmentButton } from 'ionic-angular/es2015';
 import { LoginEmailPage } from '../pages/login-email/login-email';
 import { ShopDetailPage } from '../pages/shop-detail/shop-detail';
 import { ProductPage } from '../pages/product/product';
@@ -29,7 +36,7 @@ import { PaymentPincodePage } from '../pages/payment-pincode/payment-pincode';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { Geolocation } from '@ionic-native/geolocation';
+
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { LoginPage } from '../pages/login/login';
 import { HttpModule } from '@angular/http';
@@ -38,8 +45,11 @@ import { ShopDataApiProvider } from '../providers/shop-data-api/shop-data-api';
 import { Ionic2RatingModule } from 'ionic2-rating';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { RouteUrlProvider } from '../providers/route-url/route-url';
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { RegisterProvider } from '../providers/register/register';
+import { GoogleMaps } from '@ionic-native/google-maps';
+
 
 
 @NgModule({
@@ -65,15 +75,24 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDetailPage,
     LoginEmailPage,
     NewProductPage,
-    ShopListPage
-
+    ShopListPage,
+    RateCupcoinPage,
+    ListItemComponent,
+    SearchbarComponent,
+    RegisterPage,
+    FavoritePage,
+    HeaderToolbarComponent,
+    ProductDetailPage,
+    WalkthroughPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
     Ionic2RatingModule,
-    IonicModule.forRoot(MyApp,{
-      SegmentButton:'segment'
+    IonicModule.forRoot(MyApp, {
+      SegmentButton: 'segment',
+      mode: 'ios'
+
     }),
     NgxQRCodeModule
   ],
@@ -100,19 +119,29 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ShopDetailPage,
     LoginEmailPage,
     NewProductPage,
-    ShopListPage
+    ShopListPage,
+    RateCupcoinPage,
+    ListItemComponent,
+    SearchbarComponent,
+    RegisterPage,
+    FavoritePage,
+    HeaderToolbarComponent,
+    ProductDetailPage,
+    WalkthroughPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    GoogleMaps,
     Geolocation,
     LocationProvider,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ShopDataApiProvider,
     AuthenticationProvider,
     RouteUrlProvider,
-    Facebook
+    Facebook,
+    RegisterProvider
   ]
 })
 export class AppModule { }

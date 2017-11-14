@@ -25,4 +25,19 @@ page-product {
         height: 40em;
         width: 100%;
     }
+    .peel{
+        width: 13vw;
+        height: 7vh;
+        font-size: 1.5em;
+    }
+    .item-ios{
+        padding-left: 0px;
+    }
+    .item-ios [item-left], .item-ios [item-start] {
+        margin: 0px 0px 0px 0px;
+    }
+    [img-size]{
+        height: 12vh;
+        // width: 8vw;
+    }
 }

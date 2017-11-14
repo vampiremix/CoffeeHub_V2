@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Athiti');
 page-other {
+    .content-md{
+        background-image: url("../assets/image/BG-other2.jpg") !important;
+        background-size: 100% 100% !important; 
+    }
+    .content-ios {
+        background-image: url("../assets/image/BG-other2.jpg") !important;
+        background-size: 100% 100% !important; 
+    }
+    .fontText {
+        font-family: 'Mitr', sans-serif; // font-family: 'Fredoka One', cursive;
+    }
     .segment-button.active-page {
         color: #488aff !important;
         background-color: #c9dcff !important;
@@ -38,5 +49,13 @@ page-other {
     h2{
         font-family: 'Athiti', sans-serif;
     }
-
+    #div{
+        padding: 5px;
+        color: white;
+        font-size: 15px;
+    }
+    img {
+        max-width: 90%;
+    }
+    
 }

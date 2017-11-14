@@ -2,55 +2,55 @@
   "_args": [
     [
       {
-        "raw": "cordova-plugin-device@1.1.4",
+        "raw": "cordova-plugin-device@^1.1.6",
         "scope": null,
         "escapedName": "cordova-plugin-device",
         "name": "cordova-plugin-device",
-        "rawSpec": "1.1.4",
-        "spec": "1.1.4",
-        "type": "version"
+        "rawSpec": "^1.1.6",
+        "spec": ">=1.1.6 <2.0.0",
+        "type": "range"
       },
-      "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub/node_modules"
+      "D:\\CoffeeHub_V2"
     ]
   ],
-  "_from": "cordova-plugin-device@1.1.4",
-  "_id": "cordova-plugin-device@1.1.4",
+  "_from": "cordova-plugin-device@>=1.1.6 <2.0.0",
+  "_id": "cordova-plugin-device@1.1.7",
   "_inCache": true,
   "_location": "/cordova-plugin-device",
-  "_nodeVersion": "6.7.0",
+  "_nodeVersion": "6.6.0",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/cordova-plugin-device-1.1.4.tgz_1481568063967_0.07361319195479155"
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-device-1.1.7.tgz_1510361662619_0.999291472369805"
   },
   "_npmUser": {
-    "name": "shazron",
-    "email": "shazron@gmail.com"
+    "name": "stevegill",
+    "email": "stevengill97@gmail.com"
   },
-  "_npmVersion": "3.10.9",
+  "_npmVersion": "4.6.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "cordova-plugin-device@1.1.4",
+    "raw": "cordova-plugin-device@^1.1.6",
     "scope": null,
     "escapedName": "cordova-plugin-device",
     "name": "cordova-plugin-device",
-    "rawSpec": "1.1.4",
-    "spec": "1.1.4",
-    "type": "version"
+    "rawSpec": "^1.1.6",
+    "spec": ">=1.1.6 <2.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-1.1.4.tgz",
-  "_shasum": "d5fe74712069d03f6d386ef0bd321b3abd0d38dc",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-1.1.7.tgz",
+  "_shasum": "fc94111be6932628c66868938ddf3dc82c9fbfe6",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-device@1.1.4",
-  "_where": "/Users/cybermacpro15/Documents/WORK NOW/CoffeeHub/node_modules",
+  "_spec": "cordova-plugin-device@^1.1.6",
+  "_where": "D:\\CoffeeHub_V2",
   "author": {
     "name": "Apache Software Foundation"
   },
   "bugs": {
-    "url": "https://github.com/apache/cordova-plugin-device/issues"
+    "url": "https://issues.apache.org/jira/browse/CB"
   },
   "cordova": {
     "id": "cordova-plugin-device",
@@ -73,12 +73,18 @@
   "dependencies": {},
   "description": "Cordova Device Plugin",
   "devDependencies": {
-    "jshint": "^2.6.0"
+    "eslint": "^3.19.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "directories": {},
   "dist": {
-    "shasum": "d5fe74712069d03f6d386ef0bd321b3abd0d38dc",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-1.1.4.tgz"
+    "shasum": "fc94111be6932628c66868938ddf3dc82c9fbfe6",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-device/-/cordova-plugin-device-1.1.7.tgz"
   },
   "engines": {
     "cordovaDependencies": {
@@ -109,8 +115,20 @@
   "license": "Apache-2.0",
   "maintainers": [
     {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
       "name": "csantanapr",
       "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
     },
     {
       "name": "shazron",
@@ -129,8 +147,9 @@
     "url": "git+https://github.com/apache/cordova-plugin-device.git"
   },
   "scripts": {
-    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
-    "test": "npm run jshint"
+    "eslint": "node node_modules/eslint/bin/eslint www && node node_modules/eslint/bin/eslint src && node node_modules/eslint/bin/eslint tests",
+    "test": "npm run eslint"
   },
-  "version": "1.1.4"
+  "types": "./types/index.d.ts",
+  "version": "1.1.7"
 }

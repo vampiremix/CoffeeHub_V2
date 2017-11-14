@@ -16,7 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ShopDetailPage {
   public shopImage = [];
   public rate = 5;
+  public reviewPoint = 0;
+  public dataPost = {};
+  public isHide: boolean = false;
+  // public text = "ให้คะแนน"
+  shopData:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.shopData = this.navParams.get('itemshop');
+    console.log(this.shopData);
     this.shopImage = [{
       image: './assets/image/promotion_pic_new.png'
     },
@@ -27,6 +35,21 @@ export class ShopDetailPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShopDetailPage');
+  }
+
+  getPoint(review) {
+    this.reviewPoint = review;
+    console.log(this.reviewPoint);
+  }
+
+  saveDataPost(post) {
+    this.dataPost = {
+      point: this.reviewPoint,
+      comment: post,
+      textpoint: "ให้คะแนน"
+    }
+    console.log(this.dataPost);
+    this.isHide = !this.isHide
   }
 
 }

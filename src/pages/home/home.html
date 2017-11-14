@@ -1,9 +1,10 @@
 <ion-header>
-  <ion-navbar nav-height>
+  <header-toolbar></header-toolbar>
+  <!-- <ion-navbar nav-height>
     <ion-buttons start>
       <button ion-button (click)="gotoProfile()" button-size>
         <ion-avatar item-start>
-          <img src="https://avatars2.githubusercontent.com/u/1409231?v=3&s=460">
+          <img src="./assets/icon/Profile_img2-01.png">
         </ion-avatar>
       </button>
     </ion-buttons>
@@ -15,26 +16,46 @@
         <img src="./assets/image/shop-icon-01.png" width="40" height="40">
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-navbar> -->
 </ion-header>
 
 <ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content closeDuration="300" pullingIcon="arrow-dropdown" pullingText="เลื่อนลงอัพเดทข้อมูล" refreshingSpinner="crescent"
+      refreshingText="กำลังอัพเดทข้อมูล...">
+    </ion-refresher-content>
+  </ion-refresher>
   <div #map id="map"></div>
-  <!-- --------------- POINT BANNER --------------- -->
-  <ion-card class="card-background-page" (click)="popupActivities()">
-    <img src="./assets/image/login.jpg" />
-    <!-- <div class="card-title">
-      <button ion-button round >ลงทะเบียนกดเลย</button>
-    </div>
-    <div class="card-subtitle"></div> -->
+
+  <!-- --------------- POINT BANNER WITH USER --------------- -->
+  <ion-card class="card-background-page" *ngIf="user" (click)="popupActivities()">
+    <ion-row justify-content-center no-padding >
+      <ion-col col-12 text-center point-style>
+        {{user.cupcoin}}
+      </ion-col>
+    </ion-row>
+    <img src="./assets/image/top-banner.png" />
   </ion-card>
-  <!-- --------------- POINT BANNER --------------- -->
+  <!-- --------------- POINT BANNER WITH USER --------------- -->
+
+
+  <!-- --------------- POINT BANNER WITHOUT USER--------------- -->
+
+  <ion-card class="card-background-page" (click)="gotoLogin()" *ngIf="!user">
+    <img src="./assets/image/login.jpg" />
+  </ion-card>
+
+  <!-- --------------- POINT BANNER WITHOUT USER--------------- -->
+
+
+
+
 
   <!-- --------------- PROMOTION BLOCK --------------- -->
   <div (click)="gotoPromotion()">
     <h6 class="categories-title">โปรโมชั่นแนะนำ</h6>
     <div>
-      <ion-scroll scrollX="true" class="slide-x2">
+      <ion-scroll scrollX="true" class="slide-x1">
         <ion-row no-padding class="row-custom">
           <ion-col col-6 col-img-size no-padding *ngFor="let item of promotionData">
             <img img-size [src]="item.image" alt="">
@@ -72,7 +93,7 @@
 
   <!-- --------------- SHOP HEADER BLOCK --------------- -->
   <div>
-    <img src="./assets/image/shop.jpg" />
+    <img src="./assets/image/shop-banner.png" />
   </div>
   <!-- --------------- SHOP HEADER BLOCK --------------- -->
 
@@ -89,7 +110,6 @@
         </ion-row>
       </ion-scroll>
     </div>
-
   </div>
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
 </ion-content>

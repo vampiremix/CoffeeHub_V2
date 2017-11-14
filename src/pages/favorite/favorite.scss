@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Athiti');
+page-favorite {
+    [fontText] {
+        font-family: 'Mitr', sans-serif; // font-family: 'Fredoka One', cursive;
+    }
+    ion-label {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .item-ios ion-thumbnail ion-img, .item-ios ion-thumbnail img {
+        width: 80px;
+        height: 80px;
+    }
+}

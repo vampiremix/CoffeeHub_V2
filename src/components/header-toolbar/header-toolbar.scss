@@ -1,0 +1,20 @@
+header-toolbar {
+    ion-avatar img {
+        border-radius: 50%;
+        border: solid white;
+        border-width: 2px;
+        overflow: hidden;
+        width: 42px;
+        height: 42px;
+    }
+    ion-buttons {
+        font-size: 1.5em;
+    }
+    
+    [tool-height] {
+        height: 11vh;
+    }
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+        height: 8vh;
+    }
+}

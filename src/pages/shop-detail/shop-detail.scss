@@ -1,9 +1,40 @@
 page-shop-detail {
+    ion-content{
+        background-color: rgb(209, 203, 203);
+    }
     ion-slides {
         height: 45%;
         .swiper-pagination-bullet-active {
             background: #ffffff;
         }
     }
+
+    ul {
+        padding: 0px;
+       
+        &.rating li {
+          padding: 5px 10px !important;
+          background: none;
+          color: #ffb400;
+       
+          ion-icon {
+            font-size: 30px;
+          }
+        }
+      }
+
+      ion-icon{
+        display: inline-block;
+        font-size: 1.8em;
+      }
+
+      [gg]{
+        min-height: 2px !important;
+      }
+
+    //   .icon-g{
+    //       position: absolute;
+    //       margin: 0px 30px 10px 0px !important;
+    //   }
     
 }

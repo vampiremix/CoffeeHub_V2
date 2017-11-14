@@ -5,23 +5,51 @@ page-login-email {
         background-repeat: no-repeat;
         border-color: transparent;
     }
+    .fab ion-icon {
+        color: white;
+    }
+    .fab{
+        background-color: rgba(72, 138, 255, 0);
+        border: solid 0.1em;
+        border-color: white;
+       
+    }
     [font-style] {
         color: #ffffff;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     [position] {
         position: absolute;
-        bottom: 10%;
-    }
-    [paddingTop] {
-        padding-top: 5em;
-    }
-    [row-width] {
+        bottom: 3vh;
         width: 100%;
     }
+    [paddingTop] {
+        padding-top: 7vh;
+    }
+
     [grid-style] {
         background-color: rgba(129, 129, 129, 0.39);
         border-radius: 1.5em;
-        width: 80%;
+        // width: 80%;
     }
+    ion-label[fixed] {
+       
+        flex: 0 0 60px;
+        width: 60px;
+        min-width: 77px;
+        max-width: 149px;
+    }
+    .item-input .label-md {
+        color: #ffffff;
+    }
+    .item-input .label-ios {
+        color: #ffffff;
+    }
+    .item-input ion-input{
+        color: blanchedalmond;
+    }
+    [transparent]{
+        background-color: transparent;
+    }
+
 }
