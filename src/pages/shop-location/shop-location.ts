@@ -23,7 +23,7 @@ export class ShopLocationPage {
   @ViewChild('map') mapElement: ElementRef;
   private latLng: any = {};
   dataShop;
-  Edit = "map";
+  Edit = "list";
 
   mapsLatlong: Array<ShopsModel2> = [];
   public isHide: boolean = true;
@@ -53,15 +53,13 @@ export class ShopLocationPage {
 
   clicktogglr() {
     if (this.Edit == "map") {
-      this.Edit = "list"
-      this.initMap();
-      this.isHide = !this.isHide;
+      this.Edit = "list";
+      this.isHide = true;
       
 
     } else if (this.Edit == "list") {
-      this.Edit = "map"
-      this.initMap();
-      this.isHide = this.isHide;
+      this.Edit = "map";
+      this.isHide = false;
       
     }
     
