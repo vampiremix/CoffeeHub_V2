@@ -24,20 +24,20 @@ export class ShopLocationPage {
 
   initMap() {
     this.latLng = {
-      lat: 13.9381232,
-      lng: 100.71376
+      lat: 13.933871,
+      lng: 100.717829
     };
 
     let map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 12,
+      zoom: 18,
       center: this.latLng
     });
 
     let request = {
       location: this.latLng,
       radius: '112500',
-      types: ['restaurant'],
-      keyword: 'coffee'
+      types: ['cafe','restaurant'],
+      keyword: 'cafe,coffee'
     };
 
     let service = new google.maps.places.PlacesService(map);

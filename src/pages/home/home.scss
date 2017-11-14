@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Kanit|Mitr|Sriracha');
 page-home {
+    [img-header]{
+        width: 17vw;
+        height: 8vh;
+    }
     ion-navbar {
         ion-avatar img {
             border-radius: 50%;

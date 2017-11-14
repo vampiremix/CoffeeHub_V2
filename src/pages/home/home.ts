@@ -112,8 +112,8 @@ export class HomePage {
   gotoPage(Page) {
     this.navCtrl.push(Page);
   }
-  gotoShopList() {
-    this.navCtrl.push(ShopDetailPage);
+  gotoShopList(Shopdata) {
+    this.navCtrl.push(ShopDetailPage,{});
   }
 
   ionViewDidLoad() {
@@ -156,6 +156,5 @@ export class HomePage {
   openPageShopList() {
     this.navCtrl.push(ShopListPage);
   }
-
   
 }

@@ -31,14 +31,5 @@ export class AuthenticationProvider {
     })
   }
 
-  facebookLogin() {
-    this.http.get(this.routeurl.apiUrl + 'api/auth/facebook').map(res => {
-
-    }).subscribe(data => {
-
-    }, (error) => {
-
-    });
-
-  }
+ 
 }

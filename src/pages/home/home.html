@@ -8,7 +8,7 @@
       </button>
     </ion-buttons>
     <ion-title text-center>
-      <img src="./assets/image/logo.png" width="75" height="65">
+      <img src="./assets/image/logo.png" img-header>
     </ion-title>
     <ion-buttons end>
       <button ion-button (click)="location()">
@@ -32,7 +32,7 @@
 
   <!-- --------------- PROMOTION BLOCK --------------- -->
   <div (click)="gotoPromotion()">
-    <h6>โปรโมชั่นแนะนำ</h6>
+    <h6 class="categories-title">โปรโมชั่นแนะนำ</h6>
     <div>
       <ion-scroll scrollX="true" class="slide-x2">
         <ion-row no-padding class="row-custom">
@@ -79,11 +79,11 @@
   <!-- --------------- CAFE RECOMMENT BLOCK --------------- -->
   <div>
     <h4 class="categories-title">ร้านกาแฟแนะนำ<span class="see-all" (click)="openPageShopList()">see all</span></h4>
-    <div (click)="gotoShopList()">
+    <div>
       <ion-scroll scrollX="true" class="slide-x2">
         <ion-row no-padding class="row-custom">
           <ion-col col-4 col-img-size no-padding *ngFor="let item of dataShop">
-            <img img-size [src]="item.image" alt="">
+            <img img-size [src]="item.image" alt="" (click)="gotoShopList(item)">
             <p class="name-text">{{item.name}}</p>
           </ion-col>
         </ion-row>
