@@ -26,6 +26,7 @@ export class ShopLocationPage {
   Edit = "map";
 
   mapsLatlong: Array<ShopsModel2> = [];
+  public isHide: boolean = true;
   // mapsLatlong: Array<any> = [
 
   //       { 'lat': 13.934121, 'long': 100.717228 },
@@ -47,16 +48,23 @@ export class ShopLocationPage {
 
   ionViewDidLoad() {
     this.gitDataShopLocations();
+
   }
 
   clicktogglr() {
     if (this.Edit == "map") {
       this.Edit = "list"
+      this.initMap();
+      this.isHide = !this.isHide;
+      
 
     } else if (this.Edit == "list") {
       this.Edit = "map"
-
+      this.initMap();
+      this.isHide = this.isHide;
+      
     }
+    
   }
 
   gitDataShopLocations() {
@@ -89,7 +97,6 @@ export class ShopLocationPage {
       keyword: 'coffee'
     };
     
-
     this.mapsLatlong.forEach(element => {
       let infowindow = new google.maps.InfoWindow();
       console.log(element);
@@ -102,7 +109,11 @@ export class ShopLocationPage {
         map: map,
         icon: "./assets/icon/pin_2.png"
       });
-      infowindow.setContent(element.name + element.address.subdistrict + element.address.district + element.address.province);
+      infowindow.setContent(element.name +"<br> เลขที่. "+ 
+      element.address.address +" ตำบล. "+
+      element.address.subdistrict +" อำเภอ. "+ 
+      element.address.district +"<br> จังหวัด. "+ 
+      element.address.province+" รหัส ไปรษณีย์. "+ element.address.postcode);
 
       google.maps.event.addListener(marker, 'click', () => {
         infowindow.open(map, marker);
